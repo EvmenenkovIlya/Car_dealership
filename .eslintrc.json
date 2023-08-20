@@ -38,6 +38,7 @@
   },
   "rules": {
     "semi": ["error", "always"],
+    "linebreak-style": "off",
     "prettier/prettier": "warn",
     "no-duplicate-imports": [
       "error",

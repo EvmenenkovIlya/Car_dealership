@@ -1,1 +1,53 @@
-//@import "variables";
+@import '../../variables';
+
+header {
+  color: $main-color;
+  font-family: $main-font;
+  width: 100%;
+
+  #header-info {
+    background-color: #eff0f0;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 260px;
+
+    :last-child {
+      text-decoration-line: underline;
+    }
+  }
+
+  #main-header {
+    padding: 22px 260px 29px 260px;
+
+    #navigation {
+        display: flex;
+    }
+
+    nav {
+      font-family: $main-font;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      display: flex;
+      justify-content: space-between;
+      vertical-align: baseline;
+
+      a {
+        color: $main-color;
+        text-decoration: none;
+      }
+    }
+  }
+
+  #header-dropdowns {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+  }
+
+  #header-icons {
+    display: flex;
+    gap: 40px;
+  }
+}
