@@ -1,19 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.scss';
+import { AboutPage } from './pages/AboutPage/AboutPage';
+import { CatalogPage } from './pages/CatalogPage/CatalogPage';
+import { Footer } from './components/Footer/Footer';
 import { Header } from './components/Header/Header';
 import { HomePage } from './pages/HomePage/HomePage';
-import { Footer } from './components/Footer/Footer';
-import { Route, Routes } from 'react-router-dom';
 import { LoginPage } from './pages/LoginPage/LoginPage';
-import { AboutPage } from './pages/AboutPage/AboutPage';
 import { NotFoundPage } from './pages/NotFoundPage/NotFoundPage';
 import { ReviewsPage } from './pages/ReviewsPage/ReviewsPage';
-import { CatalogPage } from './pages/CatalogPage/CatalogPage';
+import { Route, Routes } from 'react-router-dom';
+import React from 'react';
+import logo from './logo.svg';
 
 function App() {
   return (
-    <div className="App">
+    <div className="main-container">
       <Header />
       <Routes>
         <Route index element={<HomePage />} />
@@ -38,4 +38,3 @@ function App() {
 }
 
 export default App;
-
