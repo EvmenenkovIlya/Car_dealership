@@ -1,0 +1,108 @@
+@import '../../../../variables';
+
+.scroll-block {
+    .price-block {
+        display: flex;
+        justify-content: space-between;
+
+        .name {
+            font-family: $main-font;
+        }
+
+        .range {
+            font-family: $main-font;
+            font-weight: 700;
+        }
+    }
+
+    .slider-footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .multi-range-slider {
+        display: flex;
+        position: relative;
+        padding: 20px 5px;
+        box-shadow: 0 0 0;
+        border: solid 0px gray;
+        flex-direction: column;
+        user-select: none;
+
+        .ruler {
+            display: none;
+        }
+
+        .bar-inner {
+            background-color: $accent-color;
+            display: flex;
+            flex-grow: 1;
+            flex-shrink: 1;
+            justify-content: space-between;
+            position: relative;
+            border: solid 0 black;
+            justify-content: space-between;
+            box-shadow: inset 0px 0px 5px $accent-color;
+        }
+
+        .multi-range-slider .ruler {
+            display: none;
+        }
+
+        .thumb {
+            background-color: $accent-color;
+            position: relative;
+            z-index: 1;
+            cursor: pointer;
+
+            .caption * {
+                background-color: $accent-color;
+            }
+        }
+
+        .bar-left {
+            width: 25%;
+            background-color: $background-secondary-color;
+            border-radius: 10px 0px 0px 10px;
+            box-shadow: inset 0px 0px 5px $background-color;
+            padding: 4px 0px;
+        }
+
+        .bar-right {
+            width: 25%;
+            background-color: $background-secondary-color;
+            border-radius: 0px 10px 10px 0px;
+            box-shadow: inset 0px 0px 5px $background-color;
+        }
+
+        .labels {
+            display: none;
+        }
+    }
+
+    .lines {
+        display: flex;
+        justify-content: space-between;
+
+        .line-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .line {
+            width: 1px;
+            height: 8px;
+            background-color: $background-secondary-color;
+        }
+
+        .value {
+            color: var(--gray-100, #ADADB0);
+            font-family: $main-font;
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+    }
+}

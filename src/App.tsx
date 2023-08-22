@@ -7,6 +7,7 @@ import { HomePage } from './pages/HomePage/HomePage';
 import { LoginPage } from './pages/LoginPage/LoginPage';
 import { Location } from './pages/LocationPage/LocationPage';
 import { NotFoundPage } from './pages/NotFoundPage/NotFoundPage';
+import { QuickSelectionPage } from './pages/QuickSelectionPage/QuickSelectionPage';
 import { ReviewsPage } from './pages/ReviewsPage/ReviewsPage';
 import { Route, Routes } from 'react-router-dom';
 import React from 'react';
@@ -22,6 +23,7 @@ function App() {
         <Route path="reviews" element={<ReviewsPage />} />
         <Route path="catalog" element={<CatalogPage />} />
         <Route path="location" element={<Location />} />
+        <Route path="quick-selection" element={<QuickSelectionPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer />
