@@ -1,7 +1,8 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+### Figma Template 
+(https://www.figma.com/file/oZwWjs0Km1Tu52QUklZrpn/%D0%9C%D0%BD%D0%BE%D0%B3%D0%BE%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%87%D0%BD%D1%8B%D0%B9-%D1%81%D0%B0%D0%B9%D1%82---%D0%90%D0%B2%D1%82%D0%BE%D1%81%D0%B0%D0%BB%D0%BE%D0%BD?type=design&node-id=1-1343&mode=design&t=mNB8jIWWJcfEIfrs-0)
 ## Available Scripts
 
 In the project directory, you can run:
