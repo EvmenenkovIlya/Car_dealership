@@ -26,6 +26,7 @@ header {
 
       .icon-btn {
         border: none;
+        background-color: #ffffff;
       }
 
       #header-vertical-line {
@@ -115,18 +116,39 @@ header {
     display: flex;
     gap: 40px;
   }
-  
+}
 
+@media (max-width: 850px) {
+  header {
+    padding: 0;
 
-  @media (max-width: 850px) {
-
-    #header-dropdowns {
-      display: none;
+    .btn,
+    .dropdown,
+    .header-info-link,
+    #header-vertical-line,
+    #slogan,
+    #phones {
+      display: none !important;
     }
 
     #header-info {
+      padding: 5px 15px;
 
+      .main-phone {
+        
+      }
+    }
+
+    #main-header {
+      padding: 9px 15px 12px 15px;
+      display: flex;
+    }
+    #header-dropdowns {
+      padding: 0;
+    }
+    #header-icons {
+      gap: 25px;
     }
   }
-
 }
+

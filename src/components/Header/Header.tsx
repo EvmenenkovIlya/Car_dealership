@@ -22,7 +22,7 @@ export const Header = () => {
 
   return (
     <header>
-      <div id="header-info" className="computer-only">
+      <div id="header-info">
         <HeaderInfoLink url="/map" src={map} text="Россия, Москва, 38КМ МКАД, 6Бс1" />
         <HeaderInfoLink url="/worktime" src={time} text="Время работы: c 08:00 до 21:00" />
         <HeaderInfoLink url="/whatsapp" src={whatsapp} text="Whatsapp" />
@@ -41,7 +41,7 @@ export const Header = () => {
             <br />
             ваши ожидания
           </p>
-          <nav className="unvisible">
+          <nav className="unvisible, computer-only">
             <NavigationLink name={'Подбор Авто'} url={'catalog'} />
             <NavigationLink name={'О компании'} url={'about'} />
             <NavigationLink name={'Техцентр'} url={'techcenter'} />

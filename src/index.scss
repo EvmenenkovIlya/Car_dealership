@@ -22,13 +22,13 @@ section {
 }
 
 @media (max-width: 850px) {
-  .computer-only{
-    display: none;
+  .computer-only {
+    display: none !important;
   }
 }
 
 @media (min-width: 850px) {
   .mobile-only {
-    display: none;
+    display: none !important;
   }
 }
