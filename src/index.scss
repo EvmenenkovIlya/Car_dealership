@@ -2,7 +2,9 @@
 
 * {
   box-sizing: border-box;
-  margin: 0 auto;
+  margin: 0;
+  font-family: $main-font;
+  color: $main-color;
 }
 
 body {

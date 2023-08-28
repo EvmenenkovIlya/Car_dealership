@@ -10,6 +10,7 @@ import filters from './assets/filtres.svg';
 import heart from './assets/heart.svg';
 import logo from './assets/logo.svg';
 import map from './assets/map.svg';
+import redPhone from './assets/redPhone.svg';
 import search from './assets/search.svg';
 import time from './assets/time.svg';
 import whatsapp from './assets/whatsapp.svg';
@@ -26,14 +27,20 @@ export const Header = () => {
         <HeaderInfoLink url="/map" src={map} text="Россия, Москва, 38КМ МКАД, 6Бс1" />
         <HeaderInfoLink url="/worktime" src={time} text="Время работы: c 08:00 до 21:00" />
         <HeaderInfoLink url="/whatsapp" src={whatsapp} text="Whatsapp" />
+        <a href="tel:+7 (800) 551-94-31" className="phone mobile-only">
+          +7 (800) 551-94-31
+        </a>
+        <button className="callback mobile-only">
+          <img src={redPhone} alt=""></img>Обратный звонок
+        </button>
       </div>
       <div id="main-header">
         <div id="navigation">
           <button className="icon-btn" onClick={showMenu}>
-            <img src={burgerMenu} alt="menu" />
+            <img src={burgerMenu} alt="menu" id="menu" />
           </button>
           <a href="/">
-            <img src={logo} alt="logo" />
+            <img src={logo} alt="logo" id="logo" />
           </a>
           <div id="header-vertical-line"></div>
           <p id="slogan">
@@ -59,6 +66,7 @@ export const Header = () => {
           </div>
           <Button text="Обратный звонок" />
         </div>
+
         <div id="header-dropdowns">
           {catalogLinks.map((item) => (
             <Dropdown name={item.name} options={item.options} />
