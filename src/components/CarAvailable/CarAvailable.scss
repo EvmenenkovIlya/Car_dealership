@@ -39,25 +39,60 @@
             text-transform: capitalize;
             margin-bottom: 25px;
         }
+
         .top-pic {
             display: flex;
             width: 44px;
             height: 16px;
-            img{
+
+            img {
                 object-fit: cover;
             }
         }
     }
-    #vygoda{
+
+    #vygoda {
         display: flex;
         margin-bottom: 11px;
-        p{
+
+        p {
+            font-family: $main-font;
             margin-left: 15px;
+            color: $accent-color;
+            font-size: 12px;
+            font-weight: bold;
+            width: 244px;
+            line-height: normal;
+            font-style: normal;
         }
     }
-    .information-discount{
+
+    .information-discount {
         display: grid;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 41px auto;
+        height: 160px;
+
+        .picture {
+            display: grid;
+            position: relative;
+            flex-flow: column wrap;
+            align-content: space-around;
+            height: 160px;
+
+            img {
+                display: block;
+                width: 32px;
+                height: 32px;
+            }
+        }
+
+        #gift {
+            color: $accent-color;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
 
     }
 

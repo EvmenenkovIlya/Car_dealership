@@ -29,10 +29,27 @@ export const CarAvailable = () => {
           </div>
           <div id="vygoda">
             <img src={redSpace} alt="redSpace" />
-            <p >Выгода <br /> до 300 000 ₽</p>
+            <p>
+              Выгода <br /> до 300 000 ₽
+            </p>
           </div>
           <div className="information-discount">
-
+            <img src={eclipseBlack} alt="circle" />
+            <div>
+              <p>Оборудование</p>
+              <p id="gift">в подарок</p>
+            </div>
+            <img src={eclipseBlack} alt="circle" />
+            <div>
+              <p>КАСКО</p>
+              <p id="gift">в подарок</p>
+            </div>
+            <img src={eclipseBlack} alt="circle" />
+            <div>
+              <p>
+                Комплект <br /> резины</p>
+                <p id="gift">в подарок</p>
+            </div>
           </div>
           <img id="black-button" src={blackButton} alt="blackButton" />
         </div>
