@@ -1,5 +1,6 @@
 import './App.scss';
 import { AboutPage } from './pages/AboutPage/AboutPage';
+import { CarAvailable } from './components/CarAvailable/CarAvailable';
 import { CatalogPage } from './pages/CatalogPage/CatalogPage';
 import { Footer } from './components/Footer/Footer';
 import { Header } from './components/Header/Header';
@@ -21,6 +22,7 @@ function App() {
         <Route path="about" element={<AboutPage />} />
         <Route path="reviews" element={<ReviewsPage />} />
         <Route path="catalog" element={<CatalogPage />} />
+        <Route path="carAvailable" element={<CarAvailable />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <header className="App-header">

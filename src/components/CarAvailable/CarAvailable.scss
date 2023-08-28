@@ -1,0 +1,68 @@
+@import '../../variables';
+
+.car-with-pts-block {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header-pts {
+    margin-bottom: 64px;
+    align-self: center;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.main-car-container {
+    width: 1398px;
+    height: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.individual-car-container {
+    width: 446px;
+    height: 449px;
+    padding: 25px;
+    flex-shrink: 0;
+    border-radius: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 30px 0px rgba(133, 147, 159, 0.30);
+
+    .top-block {
+        display: flex;
+        justify-content: space-between;
+
+        p {
+            font-size: 27px;
+            font-weight: 700;
+            text-transform: capitalize;
+            margin-bottom: 25px;
+        }
+        .top-pic {
+            display: flex;
+            width: 44px;
+            height: 16px;
+            img{
+                object-fit: cover;
+            }
+        }
+    }
+    #vygoda{
+        display: flex;
+        margin-bottom: 11px;
+        p{
+            margin-left: 15px;
+        }
+    }
+    .information-discount{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+
+    }
+
+    #black-button {
+        width: 158.4px;
+        height: 50px;
+    }
+}
