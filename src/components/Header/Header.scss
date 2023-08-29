@@ -110,7 +110,6 @@ header {
   #header-dropdowns {
     display: flex;
     justify-content: space-between;
-
     padding-top: 30px;
   }
 
@@ -123,15 +122,6 @@ header {
 @media (max-width: 850px) {
   header {
     padding: 0;
-
-    .btn,
-    .dropdown,
-    .header-info-link,
-    #header-vertical-line,
-    #slogan,
-    #phones {
-      display: none !important;
-    }
 
     #header-info {
       padding: 5px 15px;
