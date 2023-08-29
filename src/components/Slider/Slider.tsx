@@ -1,4 +1,4 @@
-import MultiRangeSlider from 'multi-range-slider-react';
+import MultiRangeSlider, { ChangeResult } from 'multi-range-slider-react';
 // eslint-disable-next-line sort-imports-es6-autofix/sort-imports-es6
 import './Slider.scss'; //must be lower for redrawing default styles
 import React, { useState } from 'react';
@@ -11,20 +11,15 @@ export const Slider = (props: SliderProps) => {
   const [minValue, setMinValue] = useState(0);
   const [maxValue, setMaxValue] = useState(props.maxValue);
   const max = props.maxValue;
-  const step = props.maxValue / 100;
-  const handleInput = (e: any) => {
+  const step = Math.round(props.maxValue / 100);
+  const handleInput = (e: ChangeResult) => {
     setMinValue(e.minValue);
     setMaxValue(e.maxValue);
   };
 
-  const rows: any = [];
+  const spans: string[] = [];
   for (let i = 0; i < 11; i++) {
-    rows.push(
-      <div className="line-block">
-        <div className="line"></div>
-        <div className="value">{max * i * 0.1}</div>
-      </div>,
-    );
+    spans.push(Math.round(max * i * 0.1).toString());
   }
 
   return (
@@ -46,7 +41,14 @@ export const Slider = (props: SliderProps) => {
             handleInput(e);
           }}
         />
-        <div className="lines">{rows}</div>
+        <div className="lines">
+          {spans.map((item) => (
+            <div key={item} className="line-block">
+              <div className="line"></div>
+              <div className="value">{item}</div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

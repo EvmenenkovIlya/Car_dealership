@@ -1,4 +1,4 @@
-@import '../../../../variables';
+@import '../../variables';
 
 .scroll-block {
     .price-block {
@@ -55,7 +55,7 @@
             z-index: 1;
             cursor: pointer;
 
-            .caption * {
+            .caption {
                 background-color: $accent-color;
             }
         }
@@ -97,7 +97,7 @@
         }
 
         .value {
-            color: var(--gray-100, #ADADB0);
+            color: $background-third-color;
             font-family: $main-font;
             font-size: 11px;
             font-style: normal;
