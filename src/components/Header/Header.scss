@@ -26,12 +26,18 @@ header {
 
       .icon-btn {
         border: none;
+        background-color: #ffffff;
       }
 
       #header-vertical-line {
         width: 1px;
         height: 35px;
         background-color: #c2c2c4;
+      }
+
+      .btn {
+        width: 210px;
+        height: 50px;
       }
 
       #slogan {
@@ -94,6 +100,7 @@ header {
           &.secondary-phone {
             font-size: 16px;
             font-weight: 400;
+            align-self: flex-end;
           }
         }
       }
@@ -109,5 +116,73 @@ header {
   #header-icons {
     display: flex;
     gap: 40px;
+  }
+}
+
+@media (max-width: 850px) {
+  header {
+    padding: 0;
+
+    #header-info {
+      padding: 5px 15px;
+      font-weight: 700;
+      text-align: right;
+      font-style: normal;
+      line-height: normal;
+      font-family: $main-font;
+      font-size: 11px;
+      display: flex;
+      justify-content: space-between;
+
+      .phone {
+        color: $main-color;
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+
+      .callback {
+        display: flex;
+        gap: 3px;
+        font-weight: 700;
+        text-align: right;
+        font-style: normal;
+        line-height: normal;
+        font-family: $main-font;
+        font-size: 11px;
+        color: $accent-color;
+        text-decoration: none;
+        border: none;
+      }
+    }
+
+    #main-header {
+      padding: 9px 15px 12px 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      #logo {
+        width: 127px;
+        height: 37px;
+      }
+
+      #menu {
+        width: 20px;
+        height: 17px;
+      }
+    }
+
+    #header-dropdowns {
+      padding: 0;
+    }
+
+    #header-icons {
+      gap: 25px;
+
+      img {
+        width: 17px;
+        height: 17px;
+      }
+    }
   }
 }

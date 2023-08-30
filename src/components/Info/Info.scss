@@ -1,11 +1,6 @@
 @import "../../variables";
 
-.btn {
-  white-space: nowrap;
-  min-width: 244px;
-}
-
-.info {
+#info {
   border-radius: 15px;
   background: white;
   display: flex;
@@ -17,6 +12,12 @@
   display: flex;
   gap: 19px;
   flex-direction: column;
+
+  .btn {
+    white-space: nowrap;
+    height: 53px;
+    min-width: 244px;
+  }
 
   .phones {
     display: flex;
@@ -72,14 +73,14 @@
 }
 
 @media (max-width: 850px) {
-  .info {
+  #info {
     top: 100%;
     width: 100%;
   }
 }
 
 @media (min-width: 850px) {
-  .info {
+  #info {
     position: absolute;
     top: calc(100% * 0.2);
     left: calc(100% * 0.65);

@@ -7,7 +7,7 @@ import phone from './assets/phone.svg';
 
 export const Info = () => {
   return (
-    <div className="info">
+    <section id="info">
       <div className="phones">
         <div className="icons">
           <img src={background} alt={background} />
@@ -33,6 +33,6 @@ export const Info = () => {
         <div>Россия, Москва, 38КМ МКАД, 6Бс1</div>
       </div>
       <button className="btn">как до нас добраться</button>
-    </div>
+    </section>
   );
 };

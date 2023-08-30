@@ -1,5 +1,6 @@
 import './Dropdown.scss';
 import React, { useState } from 'react';
+import Select from 'react-select';
 import arrow from './dropdownArrow.svg';
 
 interface Option {

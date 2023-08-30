@@ -1,6 +1,8 @@
 @import '../../variables';
 
 .dropdown {
+  margin: 0;
+  position: relative;
   button {
     color: $main-color;
     background-color: #fff;
@@ -14,6 +16,20 @@
 
     img {
       margin-left: 10px;
+    }
+  }
+
+  ul {
+    position: absolute;
+    list-style-type: none;
+    border: 1px solid black;
+    padding: 0 40px;
+
+    a {
+      font-size: 16px;
+      color: $main-color;
+      text-decoration: none;
+      font-weight: 700;
     }
   }
 }
