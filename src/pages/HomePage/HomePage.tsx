@@ -1,6 +1,7 @@
 import './HomePage.scss';
 import { AboutCompany } from '../AboutCompanyPage/AboutCompanyPage';
 import { AboutTabControl } from './components/AboutTabControl/AboutTabControl';
+import { Blog } from '../BlogPage/BlogPage';
 import { Location } from '../LocationPage/LocationPage';
 import { Promotion } from '../../components/Promotion/Promotion';
 import { QuickSelectionPage } from '../QuickSelectionPage/QuickSelectionPage';
@@ -17,6 +18,7 @@ export const HomePage = () => {
       <AboutCompany />
       <AboutTabControl />
       <Promotion img={promotion.img} header={promotion.header} text={promotion.text} />
+      <Blog />
       <Location />
     </>
   );
