@@ -10,7 +10,6 @@ import { NotFoundPage } from './pages/NotFoundPage/NotFoundPage';
 import { ReviewsPage } from './pages/ReviewsPage/ReviewsPage';
 import { Route, Routes } from 'react-router-dom';
 import React from 'react';
-import logo from './logo.svg';
 
 function App() {
   return (
