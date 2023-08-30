@@ -24,7 +24,7 @@
 .individual-car-container {
     width: 446px;
     height: 449px;
-    padding: 33px 25px 0 25px;
+    padding: 25px 25px 0 25px;
     flex-shrink: 0;
     border-radius: 25px;
     margin-bottom: 30px;
@@ -54,10 +54,9 @@
             font-size: 27px;
             font-weight: 700;
             text-transform: capitalize;
-            margin-bottom: 25px;
             font-style: normal;
             line-height: normal;
-            text-transform: capitalize;
+            padding-bottom: 25px;
         }
 
         .top-pic {
@@ -81,7 +80,7 @@
         img {
             display: block;
             width: 94px;
-            height: 31px;
+            height: 31pх;
         }
 
         p {
@@ -89,6 +88,19 @@
             line-height: normal;
             margin-bottom: 11px;
         }
+    }
+
+    .pos {
+        position: relative;
+        top: -23px;
+        margin-left: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
     }
 
     .grid-a {
@@ -119,28 +131,41 @@
         grid-area: f;
     }
 
-
-
     #vygoda {
         display: flex;
+        align-items: center;
         margin-bottom: 11px;
+        justify-content: baseline;
 
         p {
             font-family: $main-font;
-            margin-left: 15px;
             color: $accent-color;
             font-size: 12px;
             font-weight: bold;
             width: 244px;
             line-height: normal;
             font-style: normal;
+            width: 155px;
+        }
+
+        img {
+            position: absolute;
+            z-index: -1;
+        }
+
+        #day-sale {
+            color: white;
+            margin-left: 15px;
+            display: flex;
+            font-size: 13px;
+            font-weight: 500;
         }
     }
 
     .information-discount {
         display: grid;
         grid-template-columns: 41px auto;
-        height: 160px;
+        height: 145px;
 
         .picture {
             display: grid;
@@ -156,18 +181,52 @@
             }
         }
 
-        #gift {
+        .gift {
             color: $accent-color;
-            font-size: 13px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
         }
 
+        .style {
+            font-size: 13px;
+            font-weight: 400;
+        }
     }
 
-    #black-button {
-        width: 158.4px;
+    .buttons {
+        position: relative;
         height: 50px;
+
+        .red-b {
+            position: absolute;
+            z-index: -1;
+        }
+
+        .black-b {
+            right: 132px;
+            position: absolute;
+            z-index: -2;
+        }
+
+        .grey-b {
+            position: absolute;
+            right: 0;
+            z-index: -3;
+        }
+
+        .button-text {
+            display: flex;
+            color: var(--white, #FFF);
+            font-size: 14px;
+            font-weight: 700;
+
+            button {
+                width: 132px;
+                height: 50px;
+                background-color: transparent;
+                border: none;
+                color: var(--white, #FFF);
+                font-size: 14px;
+                font-weight: 700;
+            }
+        }
     }
 }
