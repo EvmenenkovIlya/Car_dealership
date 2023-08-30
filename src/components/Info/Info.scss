@@ -1,11 +1,12 @@
 @import "../../variables";
 
-.btn {
-  white-space: nowrap;
-  min-width: 244px;
-}
-
 .info {
+  .btn {
+    white-space: nowrap;
+    min-width: 244px;
+    height: 50px;
+  }
+
   border-radius: 15px;
   background: white;
   display: flex;

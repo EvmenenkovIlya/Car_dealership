@@ -1,12 +1,13 @@
 import './Header.scss';
 import { Button } from '../Button/Button';
 import { Dropdown } from '../Dropdown/Dropdown';
+import { HeaderIcon } from './components/HeaderIcon/HeaderIcon';
 import { HeaderInfoLink } from './components/HeaderInfoLink/HeaderInfoLink';
 import { NavigationLink } from '../NavigationLink/NavigationLink';
 import { catalogLinks } from './catalogLinks';
 import burgerMenu from './assets/burgerMenu.svg';
 import call from './assets/redCallIcon.svg';
-import filters from './assets/filtres.svg';
+import comparison from './assets/comparison.svg';
 import heart from './assets/heart.svg';
 import logo from './assets/logo.svg';
 import map from './assets/map.svg';
@@ -64,9 +65,9 @@ export const Header = () => {
             <Dropdown name={item.name} options={item.options} />
           ))}
           <div id="header-icons">
-            <img src={heart} alt="" />
-            <img src={filters} alt="" />
-            <img src={search} alt="" />
+            <HeaderIcon url="/favorites" src={heart} />
+            <HeaderIcon url="/comparison" src={comparison} />
+            <HeaderIcon url="/search" src={search} />
           </div>
         </div>
       </div>

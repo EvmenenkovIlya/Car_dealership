@@ -9,6 +9,8 @@ body {
   background-color: #fff;
   color: $main-color;
   font-family: $main-font;
+  line-height: normal;
+  font-style: normal;
   width: 100%;
 }
 
@@ -21,8 +23,13 @@ section {
   padding: 0 260px;
 }
 
+h1 {
+  font-size: 56px;
+  font-weight: 700;
+}
+
 @media (max-width: 850px) {
-  .computer-only{
+  .computer-only {
     display: none;
   }
 }
