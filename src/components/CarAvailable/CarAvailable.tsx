@@ -17,7 +17,7 @@ import whiteHeart from './assets/white-heart.png';
 
 export const CarAvailable = () => {
   return (
-    <section className="car-with-pts-block">
+    <div className="car-with-pts-block">
       <h3 className="header-pts">Автомобили в наличии с ПТС</h3>
       <div className="main-car-container">
         <div className="individual-car-container">
@@ -411,6 +411,6 @@ export const CarAvailable = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
