@@ -1,1 +1,18 @@
-//@import "variables";
+@import '../../variables';
+
+footer {
+  background-color: $main-color;
+  color: #ffffff;
+  border-radius: 25px 25px 0 0;
+  margin: 0 25px;
+  display: flex;
+  padding: 12px 260px;
+
+  .brands-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+  }
+}

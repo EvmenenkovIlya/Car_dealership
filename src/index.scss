@@ -3,6 +3,8 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  font-family: $main-font;
+  color: $main-color;
 }
 
 body {
@@ -31,12 +33,12 @@ h1 {
 
 @media (max-width: 850px) {
   .computer-only {
-    display: none;
+    display: none !important;
   }
 }
 
 @media (min-width: 850px) {
   .mobile-only {
-    display: none;
+    display: none !important;
   }
 }
