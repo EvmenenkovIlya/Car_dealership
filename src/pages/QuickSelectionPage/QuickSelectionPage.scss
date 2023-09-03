@@ -7,7 +7,6 @@
     .car-quick-selection {
         display: flex;
         justify-content: space-evenly;
-        background-color: $background-color;
         padding: 20px;
 
         .brand-list {
@@ -36,7 +35,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    width: 240px;
+                    min-width: 240px;
                     height: 65px;
                     border-radius: 6px;
                     border: 1px solid var(--gray-300, $background-color);
@@ -50,4 +49,44 @@
             }
         }
     }
+}
+
+@media (max-width:850px) {
+    .quick-selection-block {
+        width: auto;
+        margin: 0 15px;
+
+        .car-quick-selection {
+            flex-direction: column;
+            gap: 25px;
+
+            .brand-list {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
+            .selection {
+                background-color: $background-color;
+                padding: 20px;
+                border-radius: 11px;
+
+                .dropdown-list {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    padding: 15px 0 10px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:851px) {
+    .quick-selection-block {
+
+        .car-quick-selection {
+            background-color: $background-color;
+            border-radius: 11px;
+        }
+    }
+
 }
