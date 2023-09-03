@@ -1,7 +1,6 @@
-import MultiRangeSlider, { ChangeResult } from 'multi-range-slider-react';
-// eslint-disable-next-line sort-imports-es6-autofix/sort-imports-es6
-import './Slider.scss'; //must be lower for redrawing default styles
+import './Slider.scss';
 import React, { useState } from 'react';
+import ReactSlider from 'react-slider';
 
 interface SliderProps {
   maxValue: number;
@@ -11,45 +10,36 @@ export const Slider = (props: SliderProps) => {
   const [minValue, setMinValue] = useState(0);
   const [maxValue, setMaxValue] = useState(props.maxValue);
   const max = props.maxValue;
-  const step = Math.round(props.maxValue / 100);
-  const handleInput = (e: ChangeResult) => {
-    setMinValue(e.minValue);
-    setMaxValue(e.maxValue);
-  };
-
-  const spans: string[] = [];
+  const spans: number[] = [];
   for (let i = 0; i < 11; i++) {
-    spans.push(Math.round(max * i * 0.1).toString());
+    spans.push(Math.round(max * i * 0.1));
   }
 
+  const setValues = (value: number[]) => {
+    setMinValue(value[0]);
+    setMaxValue(value[1]);
+  };
+
   return (
-    <div>
-      <div className="scroll-block">
-        <div className="price-block">
+    <>
+      <div className="slider-block">
+        <div className="value-block">
           <div className="name">Цена</div>
-          <div className="range">0 - {max}</div>
+          <div className="range">
+            {minValue} - {maxValue}
+          </div>
         </div>
-        <MultiRangeSlider
-          min={0}
-          max={max}
-          step={step}
-          ruler={true}
-          preventWheel={false}
-          minValue={minValue}
-          maxValue={props.maxValue}
-          onInput={(e) => {
-            handleInput(e);
-          }}
+        <ReactSlider
+          className="slider"
+          defaultValue={[minValue, maxValue]}
+          max={props.maxValue}
+          onChange={(value, index) => setValues(value)}
+          pearling
+          marks={[...spans]}
+          renderMark={(props) => <span {...props}>{props.value}</span>}
+          minDistance={10}
         />
-        <div className="lines">
-          {spans.map((item) => (
-            <div key={item} className="line-block">
-              <div className="line"></div>
-              <div className="value">{item}</div>
-            </div>
-          ))}
-        </div>
       </div>
-    </div>
+    </>
   );
 };
