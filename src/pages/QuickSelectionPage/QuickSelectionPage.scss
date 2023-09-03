@@ -38,7 +38,7 @@
                     min-width: 240px;
                     height: 65px;
                     border-radius: 6px;
-                    border: 1px solid var(--gray-300, $background-color);
+                    border: 1px solid $background-color;
                     background: white;
                 }
             }
@@ -62,6 +62,11 @@
 
             .brand-list {
                 grid-template-columns: 1fr 1fr 1fr;
+                gap: 15px;
+
+                .brand-icon {
+                    display: none;
+                }
             }
 
             .selection {
@@ -78,6 +83,7 @@
             }
         }
     }
+
 }
 
 @media (min-width:851px) {

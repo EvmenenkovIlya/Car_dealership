@@ -9,8 +9,10 @@ interface Model {
 export const Brand = (props: Model) => {
   return (
     <div className="brand">
-      <img src={props.icon} alt={props.name} />
-      <div className="name">{props.name}</div>
+      <img className="brand-icon" src={props.icon} alt={props.name} />
+      <a href="/" className="name">
+        {props.name}
+      </a>
     </div>
   );
 };
