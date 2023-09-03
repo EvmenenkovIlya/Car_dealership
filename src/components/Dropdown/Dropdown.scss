@@ -3,6 +3,7 @@
 .dropdown {
   margin: 0;
   position: relative;
+
   button {
     color: $main-color;
     background-color: #fff;
@@ -13,6 +14,7 @@
     font-weight: 700;
     line-height: normal;
     text-transform: uppercase;
+    cursor: pointer;
 
     img {
       margin-left: 10px;
