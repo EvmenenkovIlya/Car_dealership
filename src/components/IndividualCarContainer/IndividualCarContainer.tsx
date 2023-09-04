@@ -15,7 +15,6 @@ import speed from './assets/speed.png';
 import whiteHeart from './assets/white-heart.png';
 
 interface IndividualCarContainerProps {
-  id: number;
   model: string;
   type: string;
   photo: string;

@@ -1,5 +1,6 @@
 import '../IndividualCarContainer/IndividualCarContainer.scss';
 import './CarAvailable.scss';
+import { Button } from '../Button/Button';
 import { IndividualCarContainer } from '../IndividualCarContainer/IndividualCarContainer';
 import React from 'react';
 import carSpecial from './assets/car.png';
@@ -127,7 +128,7 @@ export const CarAvailable = () => {
       <div className="main-car-container">
         {carAvailable.map((item) => (
           <IndividualCarContainer
-            id={item.id}
+            key={`Cars -${item.id}`}
             type={item.type}
             model={item.model}
             photo={item.photo}
