@@ -1,6 +1,6 @@
 @import "../../variables";
 
-.container {
+#about-company-container {
   display: flex;
   gap: 31px;
   justify-items: center;
@@ -8,16 +8,8 @@
   flex-direction: column;
   align-items: center;
 
-  .header {
-    color: black;
-    font-family: $main-font;
-    font-size: 40px;
-    font-weight: 700;
-  }
-
-  span {
-    color: grey;
-    font-family: $main-font;
+  p {
+    text-align: center;
     line-height: 160%;
   }
 
@@ -33,15 +25,15 @@
 }
 
 @media (max-width: 851px) {
-  .container {
+  #about-company-container {
     align-items: flex-start;
     padding: 40px 15px;
 
     .video {
-      padding: 12px 0;
+      align-self: center;
 
       iframe {
-        width: 750px;
+        width: auto;
       }
     }
   }

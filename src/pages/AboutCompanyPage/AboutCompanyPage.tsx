@@ -11,14 +11,14 @@ export const AboutCompany = () => {
     },
   };
   return (
-    <div className="container">
-      <div className="header">О компании</div>
-      <span>
+    <section id="about-company-container">
+      <h2>О компании</h2>
+      <p>
         Мы располагаем огромной торговой площадкой более 5000 квадратных метров, у нас в наличии не менее 200 автомобилей как отечественного, так и
         иностранного производства. В штате автосалона «Альтера» работают настоящие профессионалы, которые знают особенности каждого конкретного
         автомобиля.
-      </span>
+      </p>
       <YouTube className="video" videoId="1rS2L2Zy3Ks?si=9j5iPMmpWZeT_U4W" opts={opts} />
-    </div>
+    </section>
   );
 };
