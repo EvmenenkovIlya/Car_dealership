@@ -23,16 +23,6 @@
     display: flex;
     gap: 12px;
 
-    .icons {
-      position: relative;
-
-      .main-icon {
-        position: absolute;
-        left: 7px;
-        top: 7px;
-      }
-    }
-
     .numbers {
       display: grid;
       gap: 7px;
@@ -43,32 +33,12 @@
     display: flex;
     gap: 12px;
     align-items: center;
-
-    .icons {
-      position: relative;
-
-      .main-icon {
-        position: absolute;
-        left: 6px;
-        top: 6px;
-      }
-    }
   }
 
   .location {
     display: flex;
     gap: 12px;
     align-items: center;
-
-    .icons {
-      position: relative;
-
-      .main-icon {
-        position: absolute;
-        left: 6px;
-        top: 6px;
-      }
-    }
   }
 }
 
