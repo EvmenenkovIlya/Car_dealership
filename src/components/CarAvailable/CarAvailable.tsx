@@ -144,7 +144,7 @@ export const CarAvailable = () => {
           />
         ))}
       </div>
-        <button>Показать еще</button>
+        <button className='show'>Показать еще</button>
     </div>
   );
 };

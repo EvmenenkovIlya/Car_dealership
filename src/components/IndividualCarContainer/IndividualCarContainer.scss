@@ -3,7 +3,7 @@
 .individual-car-container {
     width: 446px;
     height: 449px;
-    padding: 25px 25px 0 25px;
+    padding: 25px;
     flex-shrink: 0;
     border-radius: 25px;
     margin-bottom: 30px;
@@ -29,13 +29,13 @@
             right: -25px;
         }
 
-        p {
+        .name {
             font-size: 27px;
             font-weight: 700;
             text-transform: capitalize;
             font-style: normal;
             line-height: normal;
-            padding-bottom: 12.5px;
+            padding-bottom: 6px;
         }
 
         .top-pic {
@@ -80,6 +80,7 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        margin-bottom: 4px;
     }
 
     .grid-a {
@@ -167,6 +168,9 @@
         .style {
             font-size: 13px;
             font-weight: 400;
+            width: 97px;
+            font-style: normal;
+            line-height: normal;
         }
     }
 

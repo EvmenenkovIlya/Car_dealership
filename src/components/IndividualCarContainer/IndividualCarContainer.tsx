@@ -36,9 +36,9 @@ export const IndividualCarContainer = (props: IndividualCarContainerProps) => {
       <div className="top-block">
         <img id="fon" src={fonCity} alt="fon" />
         <img id="car" src={props.photo} alt="carSpecial" />
-        <p>
-          Skoda Octavia <p>{props.model}</p>
-        </p>
+        <div className='name'>
+          Skoda Octavia <p className='name'>{props.model}</p>
+        </div>
         <div className="top-pic">
           <img src={whiteHeart} alt="like" />
           <img src={layer} alt="layer" />
@@ -54,20 +54,20 @@ export const IndividualCarContainer = (props: IndividualCarContainerProps) => {
       </div>
       <div className="information-discount">
         <img src={present} alt="present" />
-        <p className="style">
+        <div className="style">
           {props.gift1}
           <p className="style gift">в подарок</p>
-        </p>
+        </div>
         <img src={present} alt="present" />
-        <p className="style">
+        <div className="style">
           {props.gift2}
           <p className="style gift">в подарок</p>
-        </p>
+        </div>
         <img src={present} alt="present" />
-        <p className="style">
+        <div className="style">
           {props.gift3}
           <p className="style gift">в подарок</p>
-        </p>
+        </div>
       </div>
       <div className="price">
         <p className="grid-a">{props.price}</p>
