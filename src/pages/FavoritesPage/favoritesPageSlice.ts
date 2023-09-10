@@ -18,11 +18,13 @@ const favoritesPageSlice = createSlice({
   name: 'favoritesPage',
   initialState,
   reducers: {
-    addToFavorites: (state, action: PayloadAction<Car>) => {
-      state.items.push(action.payload);
-    },
-    removeFromFavorites: (state, action: PayloadAction<Car>) => {
-      state.items = state.items.filter((item) => item.id !== action.payload.id);
+    toggleToFavorites: (state, action: PayloadAction<Car>) => {
+      const inList = state.items.find((item) => item.id === action.payload.id);
+      if (!inList) {
+        state.items.push(action.payload);
+      } else {
+        state.items = state.items.filter((item) => item.id !== action.payload.id);
+      }
     },
     clearFavorites: (state) => {
       state.items = [];
@@ -30,7 +32,7 @@ const favoritesPageSlice = createSlice({
   },
 });
 
-export const { addToFavorites, removeFromFavorites, clearFavorites } = favoritesPageSlice.actions;
+export const { toggleToFavorites, clearFavorites } = favoritesPageSlice.actions;
 
 export const selectFavoritesItems = (state: RootState) => state.favoritesPage.items;
 export const selectFavoritesItemsCount = (state: RootState) => state.favoritesPage.items.length;

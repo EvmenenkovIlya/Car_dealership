@@ -1,5 +1,5 @@
 import { Car } from '../../models/car';
-import { addToFavorites, clearFavorites, removeFromFavorites, selectFavoritesItems, selectFavoritesItemsCount } from './favoritesPageSlice';
+import { clearFavorites, selectFavoritesItems, selectFavoritesItemsCount, toggleToFavorites } from './favoritesPageSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import React from 'react';
 
@@ -35,14 +35,13 @@ export const FavoritesPage = () => {
         <div key={`item-${item.id}`}>
           <div>{item.name}</div>
           <div>{item.price}</div>
-          <button onClick={() => dispatch(addToFavorites(item))}>Add</button>
-          <button onClick={() => dispatch(removeFromFavorites(item))}>Remove</button>
+          <button onClick={() => dispatch(toggleToFavorites(item))}>Add/remove</button>
         </div>
       ))}
       <button onClick={() => dispatch(clearFavorites())}>Clear all</button>
       <div id="cars">
         {carsList.map((item) => (
-          <div key={`item-${item.id}`}>{item.id}</div>
+          <div key={`item-${item.id}`}>Car №{item.id}</div>
         ))}
         <div>Count {count}</div>
       </div>

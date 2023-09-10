@@ -89,8 +89,8 @@ export const Header = () => {
           ) : null}
           <div id="header-icons">
             <HeaderIcon url="/favorites" src={heart} count={favoritesCount} />
-            <HeaderIcon url="/comparison" src={comparison} />
-            <HeaderIcon url="/search" src={search} />
+            <HeaderIcon url="/comparison" src={comparison} count={0} />
+            <HeaderIcon url="/search" src={search} count={0} />
           </div>
         </div>
       </div>
