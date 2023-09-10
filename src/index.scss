@@ -49,6 +49,10 @@ p {
   .computer-only {
     display: none !important;
   }
+
+  section {
+    padding: 0 15px;
+  }
 }
 
 @media (min-width: 850px) {
