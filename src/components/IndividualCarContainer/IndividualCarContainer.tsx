@@ -13,66 +13,54 @@ import redHeart from './assets/red-heart.png';
 import redSpace from './assets/red-space.svg';
 import speed from './assets/speed.png';
 import whiteHeart from './assets/white-heart.png';
+import { Car } from './../../../src/Models/Car';
 
-interface IndividualCarContainerProps {
-  model: string;
-  type: string;
-  photo: string;
-  profit: string;
-  gift1: string;
-  gift2: string;
-  gift3: string;
-  price: string;
-  credit: string;
-  horsePower: string;
-  gasStation: string;
-  speed: string;
-  overclocking: string;
+interface IndividualCarItem {
+  item: Car;
 }
-
-export const IndividualCarContainer = (props: IndividualCarContainerProps) => {
+export const IndividualCarContainer = (car: IndividualCarItem) => {
   return (
     <div className="individual-car-container">
       <div className="top-block">
         <img id="fon" src={fonCity} alt="fon" />
-        <img id="car" src={props.photo} alt="carSpecial" />
-        <div className='name'>
-          Skoda Octavia <p className='name'>{props.model}</p>
+        <img id="car" src={car.item.photo} alt="carSpecial" />
+        <div className="name">
+          {car.item.type} <p className="name">{car.item.model}</p>
         </div>
         <div className="top-pic">
           <img src={whiteHeart} alt="like" />
           <img src={layer} alt="layer" />
         </div>
       </div>
-      <div id="vygoda">
+      <div id="benefit">
         <img src={redSpace} alt="redSpace" />
         <p id="day-sale">Предложение дня</p>
         <div>
           <p>Выгода</p>
-          <p>{props.profit}</p>
+          <p>{car.item.profit}</p>
         </div>
       </div>
       <div className="information-discount">
         <img src={present} alt="present" />
         <div className="style">
-          {props.gift1}
+          {car.item.gift1}
           <p className="style gift">в подарок</p>
         </div>
         <img src={present} alt="present" />
         <div className="style">
-          {props.gift2}
+          {car.item.gift2}
           <p className="style gift">в подарок</p>
         </div>
         <img src={present} alt="present" />
         <div className="style">
-          {props.gift3}
+          {car.item.gift3}
           <p className="style gift">в подарок</p>
         </div>
       </div>
       <div className="price">
-        <p className="grid-a">{props.price}</p>
+        <p className="grid-a">{car.item.price}</p>
         <p className="grid-b">
-          Кредит <b>{props.credit}</b>
+          Кредит <b>{car.item.credit}</b>
         </p>
         <img className="grid-c" src={horsePower} alt="horsePower" />
         <img className="grid-d" src={gasStation} alt="gasStation" />
@@ -80,10 +68,10 @@ export const IndividualCarContainer = (props: IndividualCarContainerProps) => {
         <img className="grid-f" src={overclocking} alt="overclocking" />
       </div>
       <div className="pos">
-        <p>{props.horsePower}</p>
-        <p>{props.gasStation}</p>
-        <p>{props.speed}</p>
-        <p>{props.overclocking}</p>
+        <p>{car.item.horsePower}</p>
+        <p>{car.item.gasStation}</p>
+        <p>{car.item.speed}</p>
+        <p>{car.item.overclocking}</p>
       </div>
       <div className="buttons">
         <img className="red-b" src={redButton} alt="redButton" />

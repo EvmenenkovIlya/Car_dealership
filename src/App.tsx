@@ -22,7 +22,7 @@ function App() {
         <Route path="about" element={<AboutPage />} />
         <Route path="reviews" element={<ReviewsPage />} />
         <Route path="catalog" element={<CatalogPage />} />
-        <Route path="carAvailable" element={<CarAvailable />} />
+        <Route path="car-available" element={<CarAvailable />} />
         <Route path="location" element={<Location />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
