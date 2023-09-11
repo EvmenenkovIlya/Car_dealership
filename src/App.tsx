@@ -1,5 +1,4 @@
 import './App.scss';
-import { AboutPage } from './pages/AboutPage/AboutPage';
 import { CatalogPage } from './pages/CatalogPage/CatalogPage';
 import { ComparisonPage } from './pages/ComparisonPage/ComparisonPage';
 import { Footer } from './components/Footer/Footer';
@@ -11,6 +10,8 @@ import { NotFoundPage } from './pages/NotFoundPage/NotFoundPage';
 import { QuickSelectionPage } from './pages/QuickSelectionPage/QuickSelectionPage';
 import { ReviewsPage } from './pages/ReviewsPage/ReviewsPage';
 import { Route, Routes } from 'react-router-dom';
+import { CarAvailable } from './components/CarAvailable/CarAvailable';
+import { AboutCompany } from './pages/AboutCompanyPage/AboutCompanyPage';
 
 function App() {
   return (
