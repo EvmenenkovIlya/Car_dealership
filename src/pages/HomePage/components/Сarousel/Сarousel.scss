@@ -1,11 +1,36 @@
-@import '../../variables';
+@import '../../../../variables';
 
-basic-carousel{
-    width: 1222px;
-    height: 598px;
-    flex-shrink: 0;
+.basic-carousel {
+    display: flex;
+    position: relative;
+    height: 600px;
     border-radius: 25px;
-    opacity: 0.58;
-    background-blend-mode: multiply;
+    margin: 0 25px 38px 25px;
+    background: var(--gray-400, #EFF0F0);
 
+    #back {
+        display: flex;
+        position: absolute;
+        right: 0;
+        border-radius: 25px;
+        opacity: 0.58;
+        margin-right: 0;
+        background-blend-mode: multiply;
+        background:  lightgray -76.778px -244.435px / 110.343% 151.497% no-repeat;
+
+    }
+.full-ad{
+    position: absolute;
+    z-index: 1;
+    margin-top: 145px;
+    left: 12.57%;
+
+}
+    #advertisement {
+        color: black;
+        font-size: 60px;
+        font-family: $main-font;
+        font-weight: 700;
+        line-height: normal;
+    }
 }

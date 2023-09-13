@@ -1,11 +1,15 @@
-import './Carousel.scss';
+import './Сarousel.scss';
 import React from 'react';
-import background from './components/background.jpg';
+import background from './components/background.png';
 
 export const Сarousel = () => {
   return (
     <div className="basic-carousel">
-      <img src={background} alt="background" />
+      <img id="back" src={background} alt="background" />
+      <div className='full-ad'>
+      <p id="advertisement">Грандиозная распродажа <br/>тестового парка!</p>
+
+      </div>
     </div>
   );
 };
