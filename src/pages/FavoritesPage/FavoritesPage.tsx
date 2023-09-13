@@ -1,28 +1,7 @@
-import { Car } from '../../models/car';
+import { Car, items } from '../../models/car';
 import { clearFavorites, selectFavoritesItems, selectFavoritesItemsCount, toggleToFavorites } from './favoritesPageSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import React from 'react';
-
-const items: Car[] = [
-  {
-    id: 1,
-    name: 'First car',
-    price: 100,
-    date: '15-07',
-    image: '',
-    inFavorites: false,
-    inComparison: false,
-  },
-  {
-    id: 2,
-    name: 'Second car',
-    price: 200,
-    date: '16-07',
-    image: '',
-    inFavorites: false,
-    inComparison: false,
-  },
-];
 
 export const FavoritesPage = () => {
   const carsList = useSelector(selectFavoritesItems);
