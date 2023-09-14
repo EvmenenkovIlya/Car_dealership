@@ -10,9 +10,18 @@
 
     .controls {
         display: flex;
+        align-items: center;
+        margin-bottom: 25px;
 
         h1 {
-            padding-bottom: 25px;
+            padding-right: 40px;
+        }
+
+        .radiobutton-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
         }
     }
 
