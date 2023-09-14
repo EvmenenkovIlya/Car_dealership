@@ -1,97 +1,81 @@
 @import '../../../../variables';
 
-// .basic-carousel {
-//     display: flex;
-//     flex-direction: row;
-//     position: relative;
-//     // height: 600px;
-//     border-radius: 25px;
-//     margin: 0 25px 38px 25px;
-//     background: var(--gray-400, #EFF0F0);
-
-//     #back {
-//         display: flex;
-//         position: absolute;
-//         right: 0;
-//         border-radius: 25px;
-//         opacity: 0.58;
-//         margin-right: 0;
-//         background-blend-mode: multiply;
-//         background: lightgray -76.778px -244.435px / 110.343% 151.497% no-repeat;
-//     }
-
-
-//     .full-ad {
-//         position: absolute;
-//         z-index: 4;
-//         margin-top: 81px;
-//         left: 12.57%;
-//         width: 42%;
-
-//         #left-only {
-//             margin-top: 35px;
-//             border-radius: 33px;
-//             background-color: $accent-color;
-//             color: #FFF;
-//             font-size: 16px;
-//             font-weight: 700;
-//             width: 208px;
-//             height: 29px;
-//             text-align: center;
-//         }
-
-//         #advertisement {
-//             color: $main-color;
-//             font-size: 60px;
-//             font-family: $main-font;
-//             font-weight: 700;
-//             line-height: normal;
-//             margin-bottom: 24px;
-//         }
-
-//         #know-price {
-//             font-size: 29px;
-//             font-weight: 400;
-//             color: $secondary-color;
-//         }
-//     }
-
-//     .picture-with-ad {
-//         position: relative;
-//         z-index: 2;
-//         width: 100%;
-//         height: 600px;
-//         border-radius: 25px;
-
-//         .pic-ad {
-//             position: absolute;
-//             z-index: 3;
-//             right: 4.4%;
-//             margin-top: 167px;
-//             width: 55.45%;
-//         }
-//     }
-// }
-
-
 [class^="number-slide"],
 [class*=" number-slide"] {
-    background: grey;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    font-size: 50px;
-    color: #fff;
-    font-weight: 500;
-    height: 300px;
-    max-height: 100vh;
 }
 
-.number-slide1 {
-    background: rgb(64, 175, 255);
-    background: linear-gradient(128deg,
-            rgba(64, 175, 255, 1) 0%,
-            rgba(63, 97, 255, 1) 100%);
+.basic-carousel {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    // height: 600px;
+    border-radius: 25px;
+    margin: 0 25px 38px 25px;
+    background: var(--gray-400, #EFF0F0);
+
+    #back {
+        display: flex;
+        position: absolute;
+        right: 0;
+        border-radius: 25px;
+        opacity: 0.58;
+        margin-right: 0;
+        background-blend-mode: multiply;
+        background: lightgray -76.778px -244.435px / 110.343% 151.497% no-repeat;
+    }
+
+
+    .full-ad {
+        position: absolute;
+        z-index: 4;
+        margin-top: 81px;
+        left: 12.57%;
+        width: 42%;
+
+        #left-only {
+            margin-top: 35px;
+            border-radius: 33px;
+            background-color: $accent-color;
+            color: #FFF;
+            font-size: 16px;
+            font-weight: 700;
+            width: 208px;
+            height: 29px;
+            text-align: center;
+        }
+
+        #advertisement {
+            color: $main-color;
+            font-size: 60px;
+            font-family: $main-font;
+            font-weight: 700;
+            line-height: normal;
+            margin-bottom: 24px;
+        }
+
+        #know-price {
+            font-size: 29px;
+            font-weight: 400;
+            color: $secondary-color;
+        }
+    }
+
+    .picture-with-ad {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        height: 600px;
+        border-radius: 25px;
+
+        .pic-ad {
+            position: absolute;
+            z-index: 3;
+            right: 4.4%;
+            margin-top: 167px;
+            width: 55.45%;
+        }
+    }
 }
 
 .number-slide2 {
@@ -138,18 +122,21 @@
 
 .dots {
     display: flex;
-    padding: 10px 0;
-    justify-content: center;
+    margin-top: -180px;
+    margin-left: 260px;
+    position: absolute;
+    z-index: 6;
+
 }
 
 .dot {
+
     border: none;
     width: 10px;
     height: 10px;
     background: #c5c5c5;
     border-radius: 50%;
     margin: 0 5px;
-    padding: 5px;
     cursor: pointer;
 }
 

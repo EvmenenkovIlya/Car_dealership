@@ -23,7 +23,17 @@ export default function Carousel() {
     <>
       <div className="navigation-wrapper">
         <div ref={sliderRef} className="keen-slider">
-          <div className="keen-slider__slide number-slide1">1</div>
+          <div className="basic-carousel keen-slider__slide number-slide1">
+            <img id="back" src={background} alt="background" />
+            <div className="full-ad">
+              <p id="left-only">Осталось всего 10 авто!</p>
+              <p id="advertisement">Грандиозная распродажа тестового парка!</p>
+              <p id="know-price">Узнай свою цену!</p>
+            </div>
+            <div className="picture-with-ad">
+              <img className="pic-ad" src={carPhoto} alt="carPhoto" />
+            </div>
+          </div>
           <div className="keen-slider__slide number-slide2">2</div>
           <div className="keen-slider__slide number-slide3">3</div>
           <div className="keen-slider__slide number-slide4">4</div>
@@ -32,10 +42,10 @@ export default function Carousel() {
         </div>
         {loaded && instanceRef.current && (
           <>
-            <Arrow left onClick={(e: any) => e.stopPropagation() || instanceRef.current?.prev()} disabled={currentSlide === 0} />
+            <Arrow left onClick={(e) => e.stopPropagation() || instanceRef.current?.prev()} disabled={currentSlide === 0} />
 
             <Arrow
-              onClick={(e: any) => e.stopPropagation() || instanceRef.current?.next()}
+              onClick={(e) => e.stopPropagation() || instanceRef.current?.next()}
               disabled={currentSlide === instanceRef.current.track.details.slides.length - 1}
             />
           </>
