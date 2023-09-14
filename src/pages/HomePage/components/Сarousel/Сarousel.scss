@@ -2,8 +2,9 @@
 
 .basic-carousel {
     display: flex;
+    flex-direction: row;
     position: relative;
-    height: 600px;
+    // height: 600px;
     border-radius: 25px;
     margin: 0 25px 38px 25px;
     background: var(--gray-400, #EFF0F0);
@@ -16,21 +17,75 @@
         opacity: 0.58;
         margin-right: 0;
         background-blend-mode: multiply;
-        background:  lightgray -76.778px -244.435px / 110.343% 151.497% no-repeat;
-
+        background: lightgray -76.778px -244.435px / 110.343% 151.497% no-repeat;
     }
-.full-ad{
-    position: absolute;
-    z-index: 1;
-    margin-top: 145px;
-    left: 12.57%;
 
-}
-    #advertisement {
-        color: black;
-        font-size: 60px;
-        font-family: $main-font;
-        font-weight: 700;
-        line-height: normal;
+
+    .full-ad {
+        position: absolute;
+        z-index: 4;
+        margin-top: 81px;
+        left: 12.57%;
+        width: 42%;
+
+        #left-only {
+            margin-top: 35px;
+            border-radius: 33px;
+            background-color: $accent-color;
+            color: #FFF;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        #advertisement {
+            color: $main-color;
+            font-size: 60px;
+            font-family: $main-font;
+            font-weight: 700;
+            line-height: normal;
+        }
+    }
+
+    .picture-with-ad {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        height: 600px;
+        border-radius: 25px;
+
+        .pic-ad {
+            position: absolute;
+            z-index: 3;
+            right: 4.4%;
+            margin-top: 167px;
+            width: 55.45%;
+        }
     }
 }
+
+    // .layer {
+    //     position: absolute;
+    //     height: auto;
+
+    //     &.first {
+    //         z-index: 3;
+    //         right: 17.91%;
+    //         width: 41.98%;
+    //         margin-top: 173px;
+    //     }
+
+    //     &.second {
+    //         z-index: 2;
+    //         right: 9.25%;
+    //         width: 27.11%;
+    //         margin-top: 184px;
+    //     }
+
+    //     &.third {
+    //         z-index: 1;
+    //         width: 21.55%;
+    //         right: 4.49%;
+    //         margin-top: 167px;
+    //     }
+
+
