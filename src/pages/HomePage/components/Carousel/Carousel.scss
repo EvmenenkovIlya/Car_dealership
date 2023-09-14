@@ -9,9 +9,8 @@
     display: flex;
     flex-direction: row;
     position: relative;
-    // height: 600px;
     border-radius: 25px;
-    margin: 0 25px 38px 25px;
+    // margin: 0 25px 38px 25px;
     background: var(--gray-400, #EFF0F0);
 
     #back {
@@ -35,6 +34,7 @@
 
         #left-only {
             margin-top: 35px;
+            margin-bottom: 35px;
             border-radius: 33px;
             background-color: $accent-color;
             color: #FFF;
@@ -118,54 +118,55 @@
 
 .navigation-wrapper {
     position: relative;
+    margin: 0 25px 38px 25px;
 }
 
 .dots {
     display: flex;
-    margin-top: -180px;
-    margin-left: 260px;
+    margin-top: -120px;
     position: absolute;
     z-index: 6;
+    align-items: center;
+    left: 13.57%;
 
 }
 
 .dot {
-
-    border: none;
-    width: 10px;
-    height: 10px;
+    width: 17px;
+    height: 21px;
     background: #c5c5c5;
     border-radius: 50%;
     margin: 0 5px;
     cursor: pointer;
-}
-
-.dot:focus {
-    outline: none;
+    flex-shrink: 0;
+    box-shadow: none;
+    border: 5px solid #EFF0F0;
 }
 
 .dot.active {
-    background: #000;
+    background-color: #FFF;
+    border-radius: 50%;
+    border: 5px solid red;
 }
 
 .arrow {
-    width: 30px;
-    height: 30px;
+    width: 36px;
+    height: 36px;
     position: absolute;
-    top: 50%;
+    top: 47.5%;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
-    fill: #fff;
+    fill: $main-color;
     cursor: pointer;
 }
 
 .arrow--left {
-    left: 5px;
+    left: 50px;
 }
 
 .arrow--right {
     left: auto;
-    right: 5px;
+    right: 50px;
 }
 
 .arrow--disabled {
