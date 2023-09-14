@@ -84,19 +84,3 @@ function Arrow(props: { disabled: boolean; left?: boolean; onClick: (e: any) => 
     </svg>
   );
 }
-
-// export const Carousel = () => {
-//   return (
-//     <div className="basic-carousel">
-//       <img id="back" src={background} alt="background" />
-//       <div className="full-ad">
-//         <p id="left-only">Осталось всего 10 авто!</p>
-//         <p id="advertisement">Грандиозная распродажа тестового парка!</p>
-//         <p id="know-price">Узнай свою цену!</p>
-//       </div>
-//       <div className="picture-with-ad">
-//         <img className="pic-ad" src={carPhoto} alt="carPhoto" />
-//       </div>
-//     </div>
-//   );
-// };
