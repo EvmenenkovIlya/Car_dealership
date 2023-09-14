@@ -22,7 +22,7 @@ export const IndividualCarContainer = (car: IndividualCarItem) => {
   return (
     <div className="individual-car-container">
       <div className="top-block">
-        <img id="fon" src={fonCity} alt="fon" />
+        <img id="background" src={fonCity} alt="background" />
         <img id="car" src={car.item.photo} alt="carSpecial" />
         <div className="name">
           {car.item.type} <p className="name">{car.item.model}</p>
