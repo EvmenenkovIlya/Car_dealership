@@ -33,7 +33,7 @@ export const Dropdown = (props: DropdownProps) => {
             if (!props.isText) {
               return (
                 <li>
-                  <a className="option-url" href={option.value}>
+                  <a className="option-url" href={option.value} key={option.value}>
                     {option.name}
                   </a>
                 </li>
