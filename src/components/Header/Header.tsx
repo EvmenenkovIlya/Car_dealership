@@ -5,6 +5,8 @@ import { HeaderIcon } from './components/HeaderIcon/HeaderIcon';
 import { HeaderInfoLink } from './components/HeaderInfoLink/HeaderInfoLink';
 import { NavigationLink } from '../NavigationLink/NavigationLink';
 import { catalogLinks } from './catalogLinks';
+import { selectFavoritesItemsCount } from '../../pages/FavoritesPage/favoritesPageSlice';
+import { useSelector } from 'react-redux';
 import burgerMenu from './assets/burgerMenu.svg';
 import call from './assets/redCallIcon.svg';
 import comparison from './assets/comparison.svg';
@@ -20,7 +22,7 @@ import whatsapp from './assets/whatsapp.svg';
 export const Header = () => {
   const { height, width } = useWindowDimensions();
   let isComputer = width > 850;
-
+  const favoritesCount = useSelector(selectFavoritesItemsCount);
   return (
     <header>
       <div id="header-info">
@@ -75,7 +77,9 @@ export const Header = () => {
               </div>
               <Button text="Обратный звонок" />
             </>
-          ) : null}
+          ) : (
+            <></>
+          )}
         </div>
         <div id="header-dropdowns">
           {isComputer ? (
@@ -84,11 +88,13 @@ export const Header = () => {
                 <Dropdown name={item.name} options={item.options} key={item.name} />
               ))}
             </>
-          ) : null}
+          ) : (
+            <></>
+          )}
           <div id="header-icons">
-            <HeaderIcon url="/favorites" src={heart} />
-            <HeaderIcon url="/comparison" src={comparison} />
-            <HeaderIcon url="/search" src={search} />
+            <HeaderIcon url="/favorites" src={heart} count={favoritesCount} />
+            <HeaderIcon url="/comparison" src={comparison} count={0} />
+            <HeaderIcon url="/search" src={search} count={0} />
           </div>
         </div>
       </div>
