@@ -1,8 +1,6 @@
 @import '../../variables';
 
 header {
-  color: $main-color;
-  font-family: $main-font;
   width: 100%;
 
   #header-info {
@@ -42,7 +40,7 @@ header {
 
       #slogan {
         color: $main-color;
-        font-family: Roboto;
+        font-family: $main-font;
         font-size: 16px;
         font-style: normal;
         font-weight: 700;
