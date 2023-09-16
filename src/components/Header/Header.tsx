@@ -77,7 +77,9 @@ export const Header = () => {
               </div>
               <Button text="Обратный звонок" />
             </>
-          ) : null}
+          ) : (
+            <></>
+          )}
         </div>
         <div id="header-dropdowns">
           {isComputer ? (
@@ -86,7 +88,9 @@ export const Header = () => {
                 <Dropdown name={item.name} options={item.options} key={item.name} />
               ))}
             </>
-          ) : null}
+          ) : (
+            <></>
+          )}
           <div id="header-icons">
             <HeaderIcon url="/favorites" src={heart} count={favoritesCount} />
             <HeaderIcon url="/comparison" src={comparison} count={0} />

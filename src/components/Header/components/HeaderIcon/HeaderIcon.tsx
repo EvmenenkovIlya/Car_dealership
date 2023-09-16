@@ -12,7 +12,7 @@ export const HeaderIcon = (props: HeaderIconProps) => {
   return (
     <a href={props.url} className="header-icon">
       <img src={props.src} alt=""></img>
-      {props.count > 0 ? <div className="count">{props.count < 99 ? props.count : '99+'}</div> : null}
+      {props.count > 0 ? <div className="count">{props.count ? props.count : '99+'}</div> : <></>}
     </a>
   );
 };
