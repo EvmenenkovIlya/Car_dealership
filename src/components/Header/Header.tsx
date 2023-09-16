@@ -3,8 +3,10 @@ import { Button } from '../Button/Button';
 import { Dropdown } from '../Dropdown/Dropdown';
 import { HeaderIcon } from './components/HeaderIcon/HeaderIcon';
 import { HeaderInfoLink } from './components/HeaderInfoLink/HeaderInfoLink';
+import { LoginPage } from '../../pages/LoginPage/LoginPage';
 import { NavigationLink } from '../NavigationLink/NavigationLink';
 import { catalogLinks } from './catalogLinks';
+import React, { useState } from 'react';
 import burgerMenu from './assets/burgerMenu.svg';
 import call from './assets/redCallIcon.svg';
 import comparison from './assets/comparison.svg';
@@ -20,7 +22,11 @@ import whatsapp from './assets/whatsapp.svg';
 export const Header = () => {
   const { height, width } = useWindowDimensions();
   let isComputer = width > 850;
+  const [showModal, setShowModal] = useState(false);
 
+  const toggleModal = () => {
+    setShowModal(!showModal);
+  };
   return (
     <header>
       <div id="header-info">
@@ -92,6 +98,8 @@ export const Header = () => {
           </div>
         </div>
       </div>
+      <button onClick={toggleModal}>Login/Register</button>
+      {showModal && <LoginPage onClose={toggleModal} />}
     </header>
   );
 };
