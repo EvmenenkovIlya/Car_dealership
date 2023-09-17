@@ -1,0 +1,18 @@
+@import '../../../variables';
+
+.article {
+
+  .date {
+    padding-top: 23px;
+    color: $background-third-color;
+    font-family: $main-font;
+    font-size: 14px;
+  }
+
+  .text {
+    padding-top: 12px;
+    color: $main-color;
+    font-family: $main-font;
+    font-weight: 700;
+  }
+}
