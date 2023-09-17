@@ -42,10 +42,10 @@ export default function Carousel() {
         </div>
         {loaded && instanceRef.current && (
           <>
-            <Arrow left onClick={(e) => e.stopPropagation() || instanceRef.current?.prev()} disabled={currentSlide === 0} />
+            <Arrow left onClick={(e: React.MouseEvent<SVGSVGElement>) => instanceRef.current?.prev()} disabled={currentSlide === 0} />
 
             <Arrow
-              onClick={(e) => e.stopPropagation() || instanceRef.current?.next()}
+              onClick={(e: React.MouseEvent<SVGSVGElement>) => instanceRef.current?.next()}
               disabled={currentSlide === instanceRef.current.track.details.slides.length - 1}
             />
           </>
@@ -70,7 +70,7 @@ export default function Carousel() {
   );
 }
 
-function Arrow(props: { disabled: boolean; left?: boolean; onClick: (e: any) => void }) {
+function Arrow(props: { disabled: boolean; left?: boolean; onClick: React.MouseEventHandler<SVGSVGElement> }) {
   const disabeld = props.disabled ? ' arrow--disabled' : '';
   return (
     <svg
