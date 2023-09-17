@@ -19,8 +19,10 @@
     margin: 5% auto;
     padding: 50px 100px;
     width: 500px;
-    height: 600px;
+    height: 700px;
     position: relative;
+    display: flex;
+    flex-direction: column;
 
     .close {
         color: $secondary-color;
@@ -40,6 +42,9 @@
     }
 
     .react-tabs {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
         .react-tabs__tab-list {
             border-bottom: none;
