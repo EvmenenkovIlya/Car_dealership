@@ -1,5 +1,6 @@
 import '../../index.scss';
 import './Promotion.scss';
+import { promotions } from './models';
 import InputMask from 'react-input-mask';
 import React from 'react';
 
@@ -9,16 +10,17 @@ export interface PromotionProps {
   text: string;
 }
 
-export const Promotion = (props: PromotionProps) => {
+export const Promotion = () => {
+  const promotion = promotions[Math.floor(Math.random() * promotions.length)];
   return (
     <section>
       <div className="promotion-block">
         <div className="images-block">
-          <img src={props.img} alt={props.img}></img>
+          <img src={promotion.img} alt={promotion.img}></img>
         </div>
         <div className="promotion">
-          <div className="header">{props.header}</div>
-          <div className="text">{props.text}</div>
+          <div className="promotion-header">{promotion.header}</div>
+          <div className="text">{promotion.text}</div>
           <div className="contact-block">
             <InputMask className="input" mask="+7 999 999 99 99" placeholder="Ваш телефон" />
             <button className="btn">Получить предложение</button>
