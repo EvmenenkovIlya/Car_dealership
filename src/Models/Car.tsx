@@ -4,9 +4,7 @@ export interface Car {
   type: string;
   photo: string;
   profit: string;
-  gift1: string;
-  gift2: string;
-  gift3: string;
+  gifts: string[];
   price: string;
   credit: string;
   horsePower: string;
