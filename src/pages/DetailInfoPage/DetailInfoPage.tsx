@@ -3,7 +3,6 @@ import './DetailInfoPage.scss';
 import { Equipment } from '../../components/Equipment/Equipment';
 import { Promotion } from '../../components/Promotion/Promotion';
 import { ToyotaCamry } from './models/carDetailInfo';
-import { TradeInPromotion } from '../../components/Promotion/models';
 import { equipments } from '../../components/Equipment/models/equipment';
 import Dropdown from '../../components/Dropdown/Dropdown';
 import React from 'react';
@@ -48,7 +47,7 @@ export const DetailInfoPage = () => {
         </div>
       </section>
 
-      <Promotion img={TradeInPromotion.img} header={TradeInPromotion.header} text={TradeInPromotion.text} />
+      <Promotion />
 
       <section>
         <div className="specifications">
