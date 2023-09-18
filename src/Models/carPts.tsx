@@ -1,4 +1,4 @@
-export interface Car {
+export interface CarPts {
   id: number;
   model: string;
   type: string;

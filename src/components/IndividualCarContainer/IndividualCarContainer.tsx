@@ -1,5 +1,5 @@
 import './IndividualCarContainer.scss';
-import { Car } from './../../../src/Models/Car';
+import { CarPts } from './../../../src/Models/carPts';
 import { string } from 'prop-types';
 import React from 'react';
 import blackButton from './assets/black-button.svg';
@@ -17,7 +17,7 @@ import speed from './assets/speed.png';
 import whiteHeart from './assets/white-heart.png';
 
 interface IndividualCarItem {
-  item: Car;
+  item: CarPts;
 }
 export const IndividualCarContainer = (car: IndividualCarItem) => {
   const myArray: string[] = car.item.gifts;

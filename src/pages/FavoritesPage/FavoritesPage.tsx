@@ -1,4 +1,4 @@
-import { Car } from '../../models/car';
+import { Car } from '../../Models/car';
 import { clearFavorites, selectFavoritesItems, selectFavoritesItemsCount, toggleToFavorites } from './favoritesPageSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import React from 'react';

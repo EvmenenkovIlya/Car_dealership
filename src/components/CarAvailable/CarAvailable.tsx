@@ -1,11 +1,11 @@
 import '../IndividualCarContainer/IndividualCarContainer.scss';
 import './CarAvailable.scss';
-import { Car } from './../../../src/Models/Car';
+import { CarPts } from './../../../src/Models/carPts';
 import { IndividualCarContainer } from '../IndividualCarContainer/IndividualCarContainer';
 import React from 'react';
 import carSpecial from './assets/car.png';
 
-const carAvailable: Car[] = [
+const carAvailable: CarPts[] = [
   {
     id: 1,
     type: 'Skoda Octavia1',
