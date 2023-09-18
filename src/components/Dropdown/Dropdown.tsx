@@ -5,12 +5,13 @@ import arrow from './dropdownArrow.svg';
 
 interface Option {
   name: string;
-  url: string;
+  value: string;
 }
 
 interface DropdownProps {
   name: string;
   options: Option[];
+  isText?: boolean;
 }
 
 export const Dropdown = (props: DropdownProps) => {
@@ -28,11 +29,23 @@ export const Dropdown = (props: DropdownProps) => {
       </button>
       {isOpen && (
         <ul className="dropdown-options">
-          {props.options.map((option) => (
-            <li>
-              <a href={option.url}>{option.name}</a>
-            </li>
-          ))}
+          {props.options.map((option) => {
+            if (!props.isText) {
+              return (
+                <li>
+                  <a className="option-url" href={option.value} key={option.value}>
+                    {option.name}
+                  </a>
+                </li>
+              );
+            }
+            return (
+              <li>
+                <div className="option-name">{option.name}</div>
+                <div className="option-value">{option.value}</div>
+              </li>
+            );
+          })}
         </ul>
       )}
     </div>
