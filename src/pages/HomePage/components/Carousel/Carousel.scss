@@ -131,21 +131,25 @@
 }
 
 .dot {
-    width: 17px;
-    height: 21px;
+    width: 10px;
+    height: 10px;
     background: #c5c5c5;
     border-radius: 50%;
     margin: 0 5px;
     cursor: pointer;
     flex-shrink: 0;
     box-shadow: none;
-    border: 5px solid #EFF0F0;
+    padding: 0;
+    border: none;
 }
 
 .dot.active {
+    width: 20px;
+    height: 20px;
     background-color: #FFF;
     border-radius: 50%;
     border: 5px solid red;
+    padding: 0;
 }
 
 .arrow {
