@@ -16,6 +16,7 @@
     "@types/redux": "^3.6.0",
     "@types/redux-logger": "^3.0.9",
     "@types/redux-persist": "^4.3.1",
+    "keen-slider": "^6.8.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-input-mask": "^3.0.0-alpha.2",
