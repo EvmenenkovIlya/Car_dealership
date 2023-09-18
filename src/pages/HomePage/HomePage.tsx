@@ -7,7 +7,6 @@ import { Promotion } from '../../components/Promotion/Promotion';
 import { QuickSelectionPage } from '../QuickSelectionPage/QuickSelectionPage';
 import { ReviewsSection } from '../ReviewsPage/components/ReviewsSection/ReviewsSection';
 
-
 export const HomePage = () => {
   return (
     <>
