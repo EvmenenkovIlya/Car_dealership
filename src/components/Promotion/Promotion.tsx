@@ -12,6 +12,7 @@ export interface PromotionProps {
 
 export const Promotion = () => {
   const promotion = promotions[Math.floor(Math.random() * promotions.length)];
+
   return (
     <section>
       <div className="promotion-block">
