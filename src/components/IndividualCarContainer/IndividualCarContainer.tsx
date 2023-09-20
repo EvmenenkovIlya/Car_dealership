@@ -47,7 +47,7 @@ export const IndividualCarContainer = (car: IndividualCarItem) => {
         {myArray.map((element: string, index: number) => (
           <>
             <img src={present} alt="present" />
-            <div className="style">
+            <div key={index} className="style">
               {element}
               <p className="style gift">в подарок</p>
             </div>
