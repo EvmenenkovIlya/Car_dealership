@@ -1,16 +1,15 @@
 export interface LoginRequest {
-  username: string;
+  login: string;
   password: string;
 }
 
 export interface LoginResponse {
-  success: boolean;
-  token?: string;
+  access_token?: string;
   error?: string;
 }
 
 export interface RegistrationRequest {
-  username: string;
+  login: string;
   email: string;
   phone: string;
   password: string;

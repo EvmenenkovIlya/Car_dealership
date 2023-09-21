@@ -1,5 +1,5 @@
-import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import { currentUserReducer } from './currentUserSlice';
+import { Action, ThunkAction, combineReducers, configureStore } from '@reduxjs/toolkit';
+import { currentUserReducer } from '../pages/LoginPage/currentUserSlice';
 import { favoritesPageReducer } from '../pages/FavoritesPage/favoritesPageSlice';
 import { persistReducer } from 'redux-persist';
 import logger from 'redux-logger';
@@ -27,3 +27,4 @@ export const store = configureStore({
 export type RootState = ReturnType<typeof store.getState>;
 // Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}
 export type AppDispatch = typeof store.dispatch;
+//export type AppThunk<ReturnType = void> = ThunkAction<ReturnType, RootState, unknown, Action<string>>;

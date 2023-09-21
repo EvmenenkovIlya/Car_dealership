@@ -1,23 +1,48 @@
 import './LoginPage.scss';
 import 'react-tabs/style/react-tabs.css';
 import { LoginRequest, RegistrationRequest } from './types';
+import { RootState } from '../../store/store';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
-import { loginUser, registerUser } from './api';
-import React, { useState } from 'react';
+import { loginFailure, loginSuccess } from './currentUserSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import React from 'react';
+
 interface ModalLoginProps {
   onClose: () => void;
 }
 
 export const LoginPage: React.FC<ModalLoginProps> = ({ onClose }) => {
+  const isAuthenticated = useSelector((state: RootState) => state.currentUser.isAuthenticated);
+  const dispatch = useDispatch();
+
   const {
     register: registerLogin,
     handleSubmit: handleSubmitLogin,
     formState: { errors: errorsLogin },
   } = useForm<LoginRequest>();
-  const onSubmitLogin: SubmitHandler<LoginRequest> = async (data) => {
-    console.log(data);
-    loginUser(data);
+  const onSubmitLogin: SubmitHandler<LoginRequest> = async (credentials) => {
+    try {
+      const response = await fetch('http://localhost:3000/auth/login', {
+        method: 'POST',
+
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(credentials),
+      });
+
+      const data = await response;
+      if (data.status === 200) {
+        const { access_token } = await data.json();
+        dispatch(loginSuccess(access_token));
+      } else {
+        const { error } = await data.json();
+        dispatch(loginFailure(error));
+      }
+    } catch (error) {
+      console.error('An error occurred:', error);
+    }
   };
 
   const {
@@ -29,7 +54,6 @@ export const LoginPage: React.FC<ModalLoginProps> = ({ onClose }) => {
 
   const onSubmitRegistration: SubmitHandler<RegistrationRequest> = (data) => {
     console.log(data);
-    registerUser(data);
   };
 
   const password = watch('password');
@@ -48,29 +72,33 @@ export const LoginPage: React.FC<ModalLoginProps> = ({ onClose }) => {
           </TabList>
 
           <TabPanel>
-            <p>Введите ваш логин и пароль для входа</p>
-            <form onSubmit={handleSubmitLogin(onSubmitLogin)} className="login">
-              <div>
-                <label htmlFor="username">Логин:</label>
-                <input type="text" {...registerLogin('username', { required: true })} />
-                {errorsLogin.username && <span>Обязательное поле</span>}
-              </div>
-              <div>
-                <label htmlFor="password">Пароль:</label>
-                <input type="password" {...registerLogin('password', { required: true })} />
-                {errorsLogin.password && <span>Обязательное поле</span>}
-              </div>
-              <button type="submit" className="btn">
-                Войти
-              </button>
-            </form>
+            {isAuthenticated ? (
+              <p>You are logged in!</p>
+            ) : (
+              <form onSubmit={handleSubmitLogin(onSubmitLogin)} className="login">
+                <div>
+                  <p>Введите ваш логин и пароль для входа</p>
+                  <label htmlFor="login">Логин:</label>
+                  <input type="text" {...registerLogin('login', { required: true })} />
+                  {errorsLogin.login && <span>Обязательное поле</span>}
+                </div>
+                <div>
+                  <label htmlFor="password">Пароль:</label>
+                  <input type="password" {...registerLogin('password', { required: true })} />
+                  {errorsLogin.password && <span>Обязательное поле</span>}
+                </div>
+                <button type="submit" className="btn">
+                  Войти
+                </button>
+              </form>
+            )}
           </TabPanel>
           <TabPanel>
             <form onSubmit={handleSubmitRegistration(onSubmitRegistration)}>
               <div>
-                <label htmlFor="username">Имя</label>
-                <input type="text" {...registerRegistration('username', { required: true })} />
-                {errorsRegistration.username && <span>Обязательное поле</span>}
+                <label htmlFor="login">Имя</label>
+                <input type="text" {...registerRegistration('login', { required: true })} />
+                {errorsRegistration.login && <span>Обязательное поле</span>}
               </div>
 
               <div>
@@ -102,7 +130,6 @@ export const LoginPage: React.FC<ModalLoginProps> = ({ onClose }) => {
                 />
                 {errorsRegistration.confirmPassword && <span>{errorsRegistration.confirmPassword.message}</span>}
               </div>
-
               <button type="submit" className="btn">
                 Зарегистрироваться
               </button>
