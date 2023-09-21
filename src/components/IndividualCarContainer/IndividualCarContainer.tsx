@@ -1,6 +1,5 @@
 import './IndividualCarContainer.scss';
-import { CarPts } from './../../../src/Models/carPts';
-import { string } from 'prop-types';
+import { CarPts } from '../../models/carPts';
 import React from 'react';
 import blackButton from './assets/black-button.svg';
 import fonCity from './assets/fon-city.png';
@@ -11,7 +10,6 @@ import layer from './assets/layer.png';
 import overclocking from './assets/overclocking.png';
 import present from './assets/present.svg';
 import redButton from './assets/red-button.svg';
-import redHeart from './assets/red-heart.png';
 import redSpace from './assets/red-space.svg';
 import speed from './assets/speed.png';
 import whiteHeart from './assets/white-heart.png';
