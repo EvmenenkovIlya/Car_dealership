@@ -1,6 +1,6 @@
 import '../IndividualCarContainer/IndividualCarContainer.scss';
 import './CarAvailable.scss';
-import { CarPts } from './../../../src/Models/carPts';
+import { CarPts } from '../../models/carPts';
 import { IndividualCarContainer } from '../IndividualCarContainer/IndividualCarContainer';
 import React from 'react';
 import carSpecial from './assets/car.png';

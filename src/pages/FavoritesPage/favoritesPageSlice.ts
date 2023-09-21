@@ -1,4 +1,4 @@
-import { Car } from '../../Models/car';
+import { Car } from '../../models/car';
 import { PayloadAction, createSlice, current } from '@reduxjs/toolkit';
 import { RootState } from '../../store/store';
 

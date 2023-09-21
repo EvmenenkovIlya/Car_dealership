@@ -20,7 +20,7 @@ export default function Carousel() {
   });
 
   return (
-    <>
+    <div className="carousel-section">
       <div className="navigation-wrapper">
         <div ref={sliderRef} className="keen-slider">
           <div className="basic-carousel keen-slider__slide number-slide1">
@@ -66,7 +66,7 @@ export default function Carousel() {
           })}
         </div>
       )}
-    </>
+    </div>
   );
 }
 
