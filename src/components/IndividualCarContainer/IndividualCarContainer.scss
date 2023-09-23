@@ -1,0 +1,218 @@
+@import '../../variables';
+
+.individual-car-container {
+    width: 446px;
+    height: 449px;
+    padding: 25px;
+    flex-shrink: 0;
+    border-radius: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 30px 0px rgba(133, 147, 159, 0.30);
+
+    .top-block {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+
+        #background {
+            position: absolute;
+            z-index: -2;
+            right: -25px;
+            width: 369px;
+            height: 218px;
+        }
+
+        #car {
+            position: absolute;
+            z-index: -1;
+            margin-top: 102px;
+            right: -25px;
+        }
+
+        .name {
+            font-size: 27px;
+            font-weight: 700;
+            text-transform: capitalize;
+            font-style: normal;
+            line-height: normal;
+            padding-bottom: 6px;
+            color: black;
+        }
+
+        .top-pic {
+            display: flex;
+            width: 44px;
+            height: 16px;
+
+            img {
+                object-fit: cover;
+            }
+        }
+    }
+
+    .price {
+        display: inline-grid;
+        grid-template-areas: "a a b b" "c d e f";
+        align-items: center;
+        justify-content: space-between;
+        width: 396px;
+
+        img {
+            display: block;
+            width: 94px;
+            height: 31pх;
+        }
+
+        p {
+            font-style: normal;
+            line-height: normal;
+            margin-bottom: 11px;
+            color: black;
+        }
+    }
+
+    .pos {
+        position: relative;
+        top: -28px;
+        margin-left: 23px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 4px;
+    }
+
+    .grid-a {
+        grid-area: a;
+        font-size: 22px;
+        font-weight: 700;
+    }
+
+    .grid-b {
+        grid-area: b;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .grid-c {
+        grid-area: c;
+    }
+
+    .grid-d {
+        grid-area: d;
+    }
+
+    .grid-e {
+        grid-area: e;
+    }
+
+    .grid-f {
+        grid-area: f;
+    }
+
+    #benefit {
+        display: flex;
+        align-items: center;
+        margin-bottom: 11px;
+        justify-content: baseline;
+
+        p {
+            font-family: $main-font;
+            color: $accent-color;
+            font-size: 12px;
+            font-weight: bold;
+            width: 244px;
+            line-height: normal;
+            font-style: normal;
+            width: 155px;
+            font-size: 12px;
+        }
+
+        img {
+            position: absolute;
+            z-index: -1;
+        }
+
+        #day-sale {
+            color: white;
+            margin-left: 15px;
+            display: flex;
+            font-size: 13px;
+            font-weight: 500;
+        }
+    }
+
+    .information-discount {
+        display: grid;
+        grid-template-columns: 41px auto;
+        height: 145px;
+
+        .picture {
+            display: grid;
+            position: relative;
+            flex-flow: column wrap;
+            align-content: space-around;
+            height: 160px;
+
+            img {
+                display: block;
+                width: 32px;
+                height: 32px;
+            }
+        }
+
+        .gift {
+            color: $accent-color;
+        }
+
+        .style {
+            font-size: 13px;
+            font-weight: 400;
+            width: 97px;
+            font-style: normal;
+            line-height: normal;
+        }
+    }
+
+    .buttons {
+        position: relative;
+        height: 50px;
+
+        .red-b {
+            position: absolute;
+            z-index: -1;
+        }
+
+        .black-b {
+            right: 132px;
+            position: absolute;
+            z-index: -2;
+        }
+
+        .grey-b {
+            position: absolute;
+            right: 0;
+            z-index: -3;
+        }
+
+        .button-text {
+            display: flex;
+            color: var(--white, #FFF);
+            font-size: 14px;
+            font-weight: 700;
+
+            button {
+                width: 132px;
+                height: 50px;
+                background-color: transparent;
+                border: none;
+                color: var(--white, #FFF);
+                font-size: 14px;
+                font-weight: 700;
+            }
+        }
+    }
+}
