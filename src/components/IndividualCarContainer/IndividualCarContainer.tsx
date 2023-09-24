@@ -1,24 +1,31 @@
 import './IndividualCarContainer.scss';
-import { CarPts } from '../../models/carPts';
+import { Car } from '../../models/car';
+import { ReactComponent as Comparison } from '../../components/assets/comparison.svg';
+import { ReactComponent as Heart } from '../../components/assets/heart.svg';
+import { RootState } from '../../store/store';
+import { checkInComparison, toggleToComparison } from '../../pages/ComparisonPage/comparisonPageSlice';
+import { checkInFavorites, toggleToFavorites } from '../../pages/FavoritesPage/favoritesPageSlice';
+import { useDispatch, useSelector } from 'react-redux';
 import React from 'react';
 import blackButton from './assets/black-button.svg';
 import fonCity from './assets/fon-city.png';
 import gasStation from './assets/gas-station.png';
 import greyButton from './assets/grey-button.svg';
 import horsePower from './assets/horse-power.png';
-import layer from './assets/layer.png';
 import overclocking from './assets/overclocking.png';
 import present from './assets/present.svg';
 import redButton from './assets/red-button.svg';
 import redSpace from './assets/red-space.svg';
 import speed from './assets/speed.png';
-import whiteHeart from './assets/white-heart.png';
 
 interface IndividualCarItem {
-  item: CarPts;
+  item: Car;
 }
 export const IndividualCarContainer = (car: IndividualCarItem) => {
+  const dispatch = useDispatch();
   const myArray: string[] = car.item.gifts;
+  const inFavorites = useSelector((state: RootState) => checkInFavorites(state, car.item.id));
+  const inComparison = useSelector((state: RootState) => checkInComparison(state, car.item.id));
   return (
     <div className="individual-car-container">
       <div className="top-block">
@@ -28,8 +35,12 @@ export const IndividualCarContainer = (car: IndividualCarItem) => {
           {car.item.type} <p className="name">{car.item.model}</p>
         </div>
         <div className="top-pic">
-          <img src={whiteHeart} alt="like" />
-          <img src={layer} alt="layer" />
+          <button onClick={() => dispatch(toggleToFavorites(car.item))}>
+            <Heart className={inFavorites ? 'in-favorites' : ''} />
+          </button>
+          <button onClick={() => dispatch(toggleToComparison(car.item))}>
+            <Comparison className={inComparison ? 'in-favorites' : ''} />
+          </button>
         </div>
       </div>
       <div id="benefit">

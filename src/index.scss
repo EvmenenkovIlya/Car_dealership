@@ -45,6 +45,12 @@ p {
   line-height: 150%;
 }
 
+.route {
+  color: $route-color;
+  font-weight: 400;
+  font-size: 14px;
+}
+
 @media (max-width: 850px) {
   .computer-only {
     display: none !important;
