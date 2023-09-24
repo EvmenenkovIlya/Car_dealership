@@ -1,5 +1,6 @@
 import './App.scss';
 import { AboutCompany } from './pages/AboutCompanyPage/AboutCompanyPage';
+import { ArticlePage } from './pages/ArticlePage/ArticlePage';
 import { Blog } from './pages/BlogPage/BlogPage';
 import { CarAvailable } from './components/CarAvailable/CarAvailable';
 import { CatalogPage } from './pages/CatalogPage/CatalogPage';
@@ -15,6 +16,7 @@ import { NotFoundPage } from './pages/NotFoundPage/NotFoundPage';
 import { QuickSelectionPage } from './pages/QuickSelectionPage/QuickSelectionPage';
 import { ReviewsPage } from './pages/ReviewsPage/ReviewsPage';
 import { Route, Routes } from 'react-router-dom';
+import { SelectionsPage } from './pages/SelectionsPage/SelectionsPage';
 
 function App() {
   return (
@@ -25,7 +27,9 @@ function App() {
         <Route path="detail" element={<DetailInfoPage />}></Route>
         <Route path="login" element={<LoginPage />} />
         <Route path="about" element={<AboutCompany />} />
+        <Route path="selections" element={<SelectionsPage />} />
         <Route path="blog" element={<Blog />} />
+        <Route path="blog/:id" element={<ArticlePage />} />
         <Route path="reviews" element={<ReviewsPage />} />
         <Route path="catalog" element={<CatalogPage />} />
         <Route path="car-available" element={<CarAvailable />} />
