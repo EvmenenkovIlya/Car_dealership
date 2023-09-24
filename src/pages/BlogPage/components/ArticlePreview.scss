@@ -1,6 +1,12 @@
 @import '../../../variables';
 
 .article {
+  img {
+    height: 215px;
+    width: -webkit-fill-available;
+    border-radius: 25px;
+    object-fit: cover;
+  }
 
   .date {
     padding-top: 23px;
