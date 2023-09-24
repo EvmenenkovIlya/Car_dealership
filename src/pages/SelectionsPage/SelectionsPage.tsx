@@ -27,7 +27,7 @@ export const SelectionsPage = () => {
           const href = '/blog/' + item.id;
 
           return (
-            <div className="selection-card">
+            <div className="selection-card" key={item.id}>
               <img className="image" src={itemBlock[0].image} alt={itemBlock[0].image} />
               <div className="title">{item.header}</div>
               <a className="btn" href={href}>
