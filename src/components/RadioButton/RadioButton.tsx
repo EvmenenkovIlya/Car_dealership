@@ -14,7 +14,15 @@ export const RadioButton = (props: RadioButtonProps) => {
   return (
     <div className="radiobutton">
       <label htmlFor={props.id} className="radiobutton-label">
-        <input type="radio" name={props.name} value={props.value} id={props.id} onChange={props.onChange} className="radiobutton-input" />
+        <input
+          type="radio"
+          name={props.name}
+          value={props.value}
+          id={props.id}
+          onChange={props.onChange}
+          className="radiobutton-input"
+          checked={props.checked}
+        />
         <span className="custom-radiobutton">{props.label}</span>
       </label>
     </div>

@@ -31,4 +31,15 @@
             border-bottom: none;
         }
     }
+
+    button {
+        border: none;
+        background: none;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    .in-favorites {
+        fill: $accent-color;
+    }
 }

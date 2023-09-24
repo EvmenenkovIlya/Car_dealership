@@ -1,11 +1,11 @@
 import '../IndividualCarContainer/IndividualCarContainer.scss';
 import './CarAvailable.scss';
-import { CarPts } from '../../models/carPts';
+import { Car } from '../../models/car';
 import { IndividualCarContainer } from '../IndividualCarContainer/IndividualCarContainer';
 import React from 'react';
 import carSpecial from './assets/car.png';
 
-const carAvailable: CarPts[] = [
+export const carAvailable: Car[] = [
   {
     id: 1,
     type: 'Skoda Octavia1',
@@ -19,6 +19,7 @@ const carAvailable: CarPts[] = [
     gasStation: '5.3',
     speed: '189',
     overclocking: '10,3',
+    condition: 'NEW_CARS',
   },
   {
     id: 2,
@@ -33,6 +34,7 @@ const carAvailable: CarPts[] = [
     gasStation: '5.3',
     speed: '189',
     overclocking: '10,3',
+    condition: 'NEW_CARS',
   },
   {
     id: 3,
@@ -47,6 +49,7 @@ const carAvailable: CarPts[] = [
     gasStation: '5.3',
     speed: '189',
     overclocking: '10,3',
+    condition: 'NEW_CARS',
   },
   {
     id: 4,
@@ -61,6 +64,7 @@ const carAvailable: CarPts[] = [
     gasStation: '5.3',
     speed: '189',
     overclocking: '10,3',
+    condition: 'OLD_CARS',
   },
   {
     id: 5,
@@ -75,6 +79,7 @@ const carAvailable: CarPts[] = [
     gasStation: '5.3',
     speed: '189',
     overclocking: '10,3',
+    condition: 'OLD_CARS',
   },
   {
     id: 6,
@@ -89,6 +94,7 @@ const carAvailable: CarPts[] = [
     gasStation: '5.3',
     speed: '189',
     overclocking: '10,3',
+    condition: 'OLD_CARS',
   },
 ];
 

@@ -1,7 +1,8 @@
 import './ComparisonPage.scss';
 import { ComparisonItem } from './components/ComparisonItem';
 import { RadioButton } from '../../components/RadioButton/RadioButton';
-import { items } from '../../models/car';
+import { selectComparisonItems } from './comparisonPageSlice';
+import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
 
 const options = [
@@ -11,13 +12,13 @@ const options = [
 ];
 
 export const ComparisonPage = () => {
-  const [selectedType, setSelectedType] = useState<String>();
+  const [selectedType, setSelectedType] = useState<String>('NEW_CARS');
 
-  // This function will be triggered when a radio button is selected
   const radioHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedType(event.target.value);
   };
-  //const isChecked = (value: string) => selectedType === value;
+  const dispatch = useDispatch();
+  const carsInComparison = useSelector(selectComparisonItems);
   // сделать route позже отдельным компонентом breadcrumbs
   return (
     <section id="comparison">
@@ -38,9 +39,6 @@ export const ComparisonPage = () => {
           ))}
         </div>
       </div>
-      <p>
-        You have selected the <strong>{selectedType}</strong> car{' '}
-      </p>
       <div className="horizontal-line"></div>
       <div className="comparison-table">
         <div className="comparison-legend">
@@ -62,9 +60,9 @@ export const ComparisonPage = () => {
           <p className="comparison-legend-item">Кол-во дверей</p>
         </div>
         <div className="comparison-items-container">
-          {items.map((item) => (
-            <ComparisonItem key={`item-${item.id}`} car={item}></ComparisonItem>
-          ))}
+          {carsInComparison.map((item) =>
+            selectedType === item.condition ? <ComparisonItem key={`item-${item.id}`} car={item}></ComparisonItem> : <></>,
+          )}
         </div>
       </div>
     </section>

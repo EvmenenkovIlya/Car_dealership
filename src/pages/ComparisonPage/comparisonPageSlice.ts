@@ -10,11 +10,11 @@ const initialState: ComparisonPage = {
   items: [],
 };
 
-const сomparisonPageSlice = createSlice({
-  name: 'сomparisonPage',
+const comparisonPageSlice = createSlice({
+  name: 'comparisonPage',
   initialState,
   reducers: {
-    toggleToСomparison: (state, action: PayloadAction<Car>) => {
+    toggleToComparison: (state, action: PayloadAction<Car>) => {
       const inList = state.items.find((item) => item.id === action.payload.id);
       if (!inList) {
         state.items.push(action.payload);
@@ -22,15 +22,16 @@ const сomparisonPageSlice = createSlice({
         state.items = state.items.filter((item) => item.id !== action.payload.id);
       }
     },
-    clearСomparison: (state) => {
+    clearComparison: (state) => {
       state.items = [];
     },
   },
 });
 
-export const { toggleToСomparison, clearСomparison } = сomparisonPageSlice.actions;
+export const { toggleToComparison, clearComparison } = comparisonPageSlice.actions;
 
-export const selectСomparisonItems = (state: RootState) => state.сomparisonPage.items;
-export const selectСomparisonItemsCount = (state: RootState) => state.сomparisonPage.items.length;
+export const selectComparisonItems = (state: RootState) => state.comparisonPage.items;
+export const selectComparisonItemsCount = (state: RootState) => state.comparisonPage.items.length;
+export const checkInComparison = (state: RootState, id: number) => state.comparisonPage.items.find((item) => item.id === id);
 
-export const сomparisonPageReducer = сomparisonPageSlice.reducer;
+export const comparisonPageReducer = comparisonPageSlice.reducer;
