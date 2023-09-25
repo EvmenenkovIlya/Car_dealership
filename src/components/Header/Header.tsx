@@ -6,6 +6,7 @@ import { HeaderInfoLink } from './components/HeaderInfoLink/HeaderInfoLink';
 import { LoginPage } from '../../pages/LoginPage/LoginPage';
 import { NavigationLink } from '../NavigationLink/NavigationLink';
 import { catalogLinks } from './catalogLinks';
+import { selectComparisonItemsCount } from '../../pages/ComparisonPage/comparisonPageSlice';
 import React, { useState } from 'react';
 import { selectFavoritesItemsCount } from '../../pages/FavoritesPage/favoritesPageSlice';
 import { useSelector } from 'react-redux';
@@ -25,6 +26,7 @@ export const Header = () => {
   const { height, width } = useWindowDimensions();
   let isComputer = width > 850;
   const favoritesCount = useSelector(selectFavoritesItemsCount);
+  const comparisonCount = useSelector(selectComparisonItemsCount);
   const [showModal, setShowModal] = useState(false);
 
   const toggleModal = () => {
@@ -100,7 +102,7 @@ export const Header = () => {
           )}
           <div id="header-icons">
             <HeaderIcon url="/favorites" src={heart} count={favoritesCount} />
-            <HeaderIcon url="/comparison" src={comparison} count={0} />
+            <HeaderIcon url="/comparison" src={comparison} count={comparisonCount} />
             <HeaderIcon url="/search" src={search} count={0} />
           </div>
         </div>

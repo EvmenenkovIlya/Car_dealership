@@ -1,0 +1,41 @@
+@import '../../variables';
+
+.car-with-pts-block {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .header-pts {
+        margin-bottom: 64px;
+        align-self: center;
+        font-size: 40px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .main-car-container {
+        display: flex;
+        width: 1398px;
+        height: auto;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+
+    .show {
+        border-radius: 6px;
+        background: $accent-color;
+        border: none;
+        color: var(--white, #fff);
+        text-align: center;
+        font-family: $main-font;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        width: 312px;
+        height: 65px;
+        flex-shrink: 0;
+        margin: 0 auto;
+        margin-bottom: 67px;
+    }
+}

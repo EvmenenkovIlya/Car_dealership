@@ -9,6 +9,7 @@ import useWindowDimensions from '../../hooks/useWindowDimensions';
 interface FlipperProps {
   node: ReactNode | ReactNode[];
   perView?: 'auto' | number | (() => number | 'auto');
+  isDotsHide?: boolean;
 }
 
 export const Flipper = (props: FlipperProps) => {
@@ -66,7 +67,7 @@ export const Flipper = (props: FlipperProps) => {
           </div>
         </div>
       </div>
-      {loaded && instanceRef.current && (
+      {!props.isDotsHide && loaded && instanceRef.current && (
         <div className="dots">
           {[...Array(instanceRef.current.track.details.slides.length).keys()].map((idx) => {
             return (

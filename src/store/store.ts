@@ -1,4 +1,6 @@
 import { Action, ThunkAction, combineReducers, configureStore } from '@reduxjs/toolkit';
+import { comparisonPageReducer } from '../pages/ComparisonPage/comparisonPageSlice';
+import { currentUserReducer } from './currentUserSlice';
 import { currentUserReducer } from '../pages/LoginPage/currentUserSlice';
 import { favoritesPageReducer } from '../pages/FavoritesPage/favoritesPageSlice';
 import { persistReducer } from 'redux-persist';
@@ -14,6 +16,7 @@ const persistConfig = {
 const reducers = combineReducers({
   currentUser: currentUserReducer,
   favoritesPage: favoritesPageReducer,
+  comparisonPage: comparisonPageReducer,
 });
 const persistedReducer = persistReducer(persistConfig, reducers);
 
