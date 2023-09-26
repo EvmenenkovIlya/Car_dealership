@@ -1,7 +1,6 @@
 import { PayloadAction, createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { RootState } from '../../store/store';
-import { User } from '../../models/user';
 
+const baseUrl = process.env.REACT_APP_BASE_URL;
 interface CurrentUser {
   theme: 'light' | 'dark';
   isAuthenticated: boolean;
