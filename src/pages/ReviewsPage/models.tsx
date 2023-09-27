@@ -3,19 +3,19 @@ import React from 'react';
 
 export const reviews: ReviewProps[] = [
   {
-    clientName: 'Client name',
+    clientName: 'Александра',
     clientReviewText:
       'Я нахожусь в салоне ALTERA, всем советую, хороший коллектив, добрые люди, приветствуют, это не обман, вам гарантия 100 % точно, чисто от меня, приезжайте! Мы приехали приобрести автомобиль в салон ALTERA...',
     youtubeId: 'P488mvqjUtg?si=2Uy5d8Xns2bBdF3F',
   },
   {
-    clientName: 'Client name',
+    clientName: 'Мария',
     clientReviewText:
       'Спасибо ABC AUTO и менеджеру Никите, за хорошее отношение к клиентам, за честность, искренность, лояльность. Всех благ и побольше вам таких сотрудников!',
     youtubeId: 'd3ccvwDWFY0?si=Bl8AzFajo2Cg-YEm',
   },
   {
-    clientName: 'Client name',
+    clientName: 'Галина',
     clientReviewText:
       'Хочется выразить большую благодарность АВС AUTO, специалисту менеджеру Никите и специалисту по кредиту Карине. Хорошо работают, быстро. Великолепный центр, Очень нравится. Пожалуйста, приглашаем всех сюда. Спасибо большое!',
     youtubeId: 'zKHXOZEAf3c?si=SG8_FPcqGQgGwU1P',

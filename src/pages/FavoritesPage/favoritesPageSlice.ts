@@ -1,4 +1,4 @@
-import { Car } from '../../Models/car';
+import { Car } from '../../models/car';
 import { PayloadAction, createSlice, current } from '@reduxjs/toolkit';
 import { RootState } from '../../store/store';
 
@@ -36,5 +36,6 @@ export const { toggleToFavorites, clearFavorites } = favoritesPageSlice.actions;
 
 export const selectFavoritesItems = (state: RootState) => state.favoritesPage.items;
 export const selectFavoritesItemsCount = (state: RootState) => state.favoritesPage.items.length;
+export const checkInFavorites = (state: RootState, id: number) => state.favoritesPage.items.find((item) => item.id === id);
 
 export const favoritesPageReducer = favoritesPageSlice.reducer;

@@ -1,4 +1,4 @@
-export interface CarPts {
+export interface Car {
   id: number;
   model: string;
   type: string;
@@ -11,4 +11,5 @@ export interface CarPts {
   gasStation: string;
   speed: string;
   overclocking: string;
+  condition: string;
 }

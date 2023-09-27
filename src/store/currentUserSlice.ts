@@ -1,5 +1,5 @@
 import { RootState } from './store';
-import { User } from '../Models/user';
+import { User } from '../models/user';
 import { createSlice } from '@reduxjs/toolkit';
 
 interface CurrentUser {
