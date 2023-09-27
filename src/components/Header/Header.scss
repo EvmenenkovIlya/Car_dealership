@@ -108,12 +108,18 @@ header {
   #header-dropdowns {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-top: 30px;
   }
 
   #header-icons {
     display: flex;
     gap: 40px;
+  }
+
+  .login-button {
+    padding: 0 30px;
+    min-height: 50px;
   }
 }
 
@@ -181,6 +187,13 @@ header {
         width: 17px;
         height: 17px;
       }
+    }
+
+    .login-button {
+      padding: 5px 10px;
+      font-size: 14px;
+      min-height: 40px;
+      margin-right: 20px;
     }
   }
 }

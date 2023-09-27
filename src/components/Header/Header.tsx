@@ -7,9 +7,9 @@ import { LoginPage } from '../../pages/LoginPage/LoginPage';
 import { NavigationLink } from '../NavigationLink/NavigationLink';
 import { catalogLinks } from './catalogLinks';
 import { selectComparisonItemsCount } from '../../pages/ComparisonPage/comparisonPageSlice';
-import React, { useState } from 'react';
 import { selectFavoritesItemsCount } from '../../pages/FavoritesPage/favoritesPageSlice';
 import { useSelector } from 'react-redux';
+import React, { useState } from 'react';
 import burgerMenu from './assets/burgerMenu.svg';
 import call from './assets/redCallIcon.svg';
 import comparison from './assets/comparison.svg';
@@ -100,6 +100,9 @@ export const Header = () => {
           ) : (
             <></>
           )}
+          <button className="btn login-button" onClick={toggleModal}>
+            Войти
+          </button>
           <div id="header-icons">
             <HeaderIcon url="/favorites" src={heart} count={favoritesCount} />
             <HeaderIcon url="/comparison" src={comparison} count={comparisonCount} />
@@ -107,7 +110,7 @@ export const Header = () => {
           </div>
         </div>
       </div>
-      <button onClick={toggleModal}>Login/Register</button>
+
       {showModal && <LoginPage onClose={toggleModal} />}
     </header>
   );

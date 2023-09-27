@@ -1,4 +1,5 @@
 import { PayloadAction, createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { RootState } from '../../store/store';
 
 const baseUrl = process.env.REACT_APP_BASE_URL;
 interface CurrentUser {
@@ -38,5 +39,5 @@ export const currentUserSlice = createSlice({
 });
 
 export const { loginSuccess, loginFailure, logout } = currentUserSlice.actions;
-
+export const isAuthenticated = (state: RootState) => state.currentUser.isAuthenticated;
 export const currentUserReducer = currentUserSlice.reducer;

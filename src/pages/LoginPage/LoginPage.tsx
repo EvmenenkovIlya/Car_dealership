@@ -47,7 +47,7 @@ export const LoginPage: React.FC<ModalLoginProps> = ({ onClose }) => {
   const confirmPassword = watch('confirmPassword');
 
   return (
-    <div className="modal">
+    <div id="login" className="modal">
       <div id="modal-content">
         <button className="close" onClick={onClose}>
           &times;
@@ -66,8 +66,8 @@ export const LoginPage: React.FC<ModalLoginProps> = ({ onClose }) => {
 
             <TabPanel>
               <form onSubmit={handleSubmitLogin(onSubmitLogin)} className="login">
+                <p>Введите ваш логин и пароль для входа</p>
                 <div>
-                  <p>Введите ваш логин и пароль для входа</p>
                   <label htmlFor="login">Логин:</label>
                   <input type="text" {...registerLogin('login', { required: true })} />
                   {errorsLogin.login && <span>Обязательное поле</span>}
@@ -85,7 +85,7 @@ export const LoginPage: React.FC<ModalLoginProps> = ({ onClose }) => {
             <TabPanel>
               <form onSubmit={handleSubmitRegistration(onSubmitRegistration)}>
                 <div>
-                  <label htmlFor="login">Имя</label>
+                  <label htmlFor="login">Логин</label>
                   <input type="text" {...registerRegistration('login', { required: true })} />
                   {errorsRegistration.login && <span>Обязательное поле</span>}
                 </div>

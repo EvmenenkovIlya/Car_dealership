@@ -1,22 +1,12 @@
 import './ComparisonPage.scss';
 import { ComparisonItem } from './components/ComparisonItem';
-import { RadioButton } from '../../components/RadioButton/RadioButton';
+import { RadioButtonContainer } from '../../components/RadioButton/RadioButtonContainer';
 import { selectComparisonItems } from './comparisonPageSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
 
-const options = [
-  { value: 'NEW_CARS', label: 'Новые авто 3', id: 1 },
-  { value: 'OLD_CARS', label: 'С пробегом 3', id: 2 },
-  { value: 'TAXIS', label: 'Такси 3', id: 3 },
-];
-
 export const ComparisonPage = () => {
-  const [selectedType, setSelectedType] = useState<String>('NEW_CARS');
-
-  const radioHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSelectedType(event.target.value);
-  };
+  const [selectedType, setSelectedType] = useState<string>('NEW_CARS');
   const dispatch = useDispatch();
   const carsInComparison = useSelector(selectComparisonItems);
   // сделать route позже отдельным компонентом breadcrumbs
@@ -25,20 +15,9 @@ export const ComparisonPage = () => {
       <div className="route">Главная {'>'} Сравнение</div>
       <div className="controls">
         <h1>Сравнение</h1>
-        <div className="radiobutton-container">
-          {options.map((item) => (
-            <RadioButton
-              name="car-type"
-              value={item.value}
-              id={'type-' + item.id}
-              onChange={radioHandler}
-              checked={selectedType === item.value}
-              label={item.label}
-              key={'key-' + item.id}
-            />
-          ))}
-        </div>
+        <RadioButtonContainer onSelectedChange={setSelectedType} />
       </div>
+      <p>{selectedType}</p>
       <div className="horizontal-line"></div>
       <div className="comparison-table">
         <div className="comparison-legend">
