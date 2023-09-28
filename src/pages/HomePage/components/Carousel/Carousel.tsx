@@ -4,6 +4,7 @@ import { useKeenSlider } from 'keen-slider/react';
 import KeenSlider from 'keen-slider';
 import React, { useState } from 'react';
 import background from './assets/background.png';
+import backgroundMob from './assets/backgroundMob.png';
 import carPhoto from './assets/car-ad.png';
 
 export default function Carousel() {
@@ -24,7 +25,8 @@ export default function Carousel() {
       <div className="navigation">
         <div ref={sliderRef} className="keen-slider">
           <div className="basic-carousel keen-slider__slide number-slide1">
-            <img id="back" src={background} alt="background" />
+            <img className="desktop-only" id="back" src={background} alt="background" />
+            <img className="mobile-only" id="back" src={backgroundMob} alt="background" />
             <div className="full-ad">
               <p id="left-only">Осталось всего 10 авто!</p>
               <p id="advertisement">Грандиозная распродажа тестового парка!</p>
@@ -75,7 +77,7 @@ function Arrow(props: { disabled: boolean; left?: boolean; onClick: React.MouseE
   return (
     <svg
       onClick={props.onClick}
-      className={`carusel-arrow ${props.left ? 'carusel-arrow--left' : 'carusel-arrow--right'} ${disabeld}`}
+      className={`desktop-only carusel-arrow ${props.left ? 'desktop-only carusel-arrow--left' : 'desktop-only carusel-arrow--right'} ${disabeld}`}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
     >
