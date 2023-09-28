@@ -1,5 +1,5 @@
 import './App.scss';
-import { AboutCompany } from './pages/AboutCompanyPage/AboutCompanyPage';
+import { AboutCompanyPage } from './pages/AboutCompanyPage/AboutCompanyPage';
 import { ArticlePage } from './pages/ArticlePage/ArticlePage';
 import { Blog } from './pages/BlogPage/BlogPage';
 import { CarAvailable } from './components/CarAvailable/CarAvailable';
@@ -24,7 +24,8 @@ function App() {
       <Routes>
         <Route index element={<HomePage />} />
         <Route path="detail" element={<DetailInfoPage />}></Route>
-        <Route path="about" element={<AboutCompany />} />
+        <Route path="login" element={<LoginPage />} />
+        <Route path="about-company" element={<AboutCompanyPage />} />
         <Route path="selections" element={<SelectionsPage />} />
         <Route path="blog" element={<Blog />} />
         <Route path="blog/:id" element={<ArticlePage />} />
