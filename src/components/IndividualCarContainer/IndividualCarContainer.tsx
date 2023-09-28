@@ -17,11 +17,15 @@ import present from './assets/present.svg';
 import redButton from './assets/red-button.svg';
 import redSpace from './assets/red-space.svg';
 import speed from './assets/speed.png';
+import useWindowDimensions from '../../hooks/useWindowDimensions';
 
 interface IndividualCarItem {
   item: Car;
 }
 export const IndividualCarContainer = (car: IndividualCarItem) => {
+  const { height, width } = useWindowDimensions();
+  let isComputer = width > 850;
+
   const dispatch = useDispatch();
   const myArray: string[] = car.item.gifts;
   const inFavorites = useSelector((state: RootState) => checkInFavorites(state, car.item.id));
