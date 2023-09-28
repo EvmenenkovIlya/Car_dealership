@@ -115,7 +115,7 @@
                 rgba(174, 63, 255, 1) 100%);
     }
 
-    .navigation-wrapper {
+    .navigation {
         position: relative;
         margin: 0 25px 38px 25px;
     }
@@ -152,7 +152,7 @@
         padding: 0;
     }
 
-    .arrow {
+    .carusel-arrow {
         width: 36px;
         height: 36px;
         position: absolute;
@@ -163,16 +163,16 @@
         cursor: pointer;
     }
 
-    .arrow--left {
+    .carusel-arrow--left {
         left: 50px;
     }
 
-    .arrow--right {
+    .carusel-arrow--right {
         left: auto;
         right: 50px;
     }
 
-    .arrow--disabled {
+    .carusel-arrow--disabled {
         fill: rgba(255, 255, 255, 0.5);
     }
 }
