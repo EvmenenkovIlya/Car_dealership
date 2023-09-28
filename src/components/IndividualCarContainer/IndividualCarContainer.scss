@@ -223,6 +223,7 @@
         }
     }
 }
+
 @media (min-width:851px) {
     .mobile-only {
         display: none !important;
@@ -232,5 +233,29 @@
 @media (max-width:850px) {
     .desktop-only {
         display: none !important;
+    }
+
+    .individual-car-container {
+        width: 290px;
+        height: 416px;
+        padding: 20px;
+        border-radius: 25px;
+        margin-bottom: 30px;
+        box-shadow: 0px 0px 30px 0px rgba(133, 147, 159, 0.30);
+
+        .top-block {
+
+            .name {
+                font-size: 20px;
+            }
+
+            #car {
+                margin-top: 108px;
+                right: -5px;
+                width: 153px;
+                height: 85px;
+
+            }
+        }
     }
 }

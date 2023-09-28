@@ -15,7 +15,7 @@
 
     .main-car-container {
         display: flex;
-        width: 1398px;
+        padding: 0 260px;
         height: auto;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -40,6 +40,7 @@
     }
 
 }
+
 @media (min-width:851px) {
     .mobile-only {
         display: none !important;
@@ -49,5 +50,9 @@
 @media (max-width:850px) {
     .desktop-only {
         display: none !important;
+    }
+
+    .main-car-container {
+        padding: 0 10px;
     }
 }
