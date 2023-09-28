@@ -11,7 +11,6 @@ import { Footer } from './components/Footer/Footer';
 import { Header } from './components/Header/Header';
 import { HomePage } from './pages/HomePage/HomePage';
 import { Location } from './pages/LocationPage/LocationPage';
-import { LoginPage } from './pages/LoginPage/LoginPage';
 import { NotFoundPage } from './pages/NotFoundPage/NotFoundPage';
 import { QuickSelectionPage } from './pages/QuickSelectionPage/QuickSelectionPage';
 import { ReviewsPage } from './pages/ReviewsPage/ReviewsPage';
