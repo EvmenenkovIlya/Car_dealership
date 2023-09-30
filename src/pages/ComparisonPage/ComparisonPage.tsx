@@ -1,13 +1,13 @@
 import './ComparisonPage.scss';
 import { ComparisonItem } from './components/ComparisonItem';
+import { Option, options } from '../../components/RadioButton/options';
 import { RadioButtonContainer } from '../../components/RadioButton/RadioButtonContainer';
 import { selectComparisonItems } from './comparisonPageSlice';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { useState } from 'react';
 
 export const ComparisonPage = () => {
   const [selectedType, setSelectedType] = useState<string>('NEW_CARS');
-  const dispatch = useDispatch();
   const carsInComparison = useSelector(selectComparisonItems);
   // сделать route позже отдельным компонентом breadcrumbs
   return (
@@ -15,15 +15,15 @@ export const ComparisonPage = () => {
       <div className="route">Главная {'>'} Сравнение</div>
       <div className="controls">
         <h1>Сравнение</h1>
-        <RadioButtonContainer onSelectedChange={setSelectedType} />
+        <RadioButtonContainer onSelectedChange={setSelectedType} cars={carsInComparison} options={options} />
       </div>
-      <p>{selectedType}</p>
       <div className="horizontal-line"></div>
       <div className="comparison-table">
         <div className="comparison-legend">
           <div className="comparison-legend-item">
             <p>Автомобили</p>
-            <button>Показать различия</button>
+            <input type="checkbox"></input>
+            <label htmlFor="checkbox">Показать различия</label>
           </div>
           <p className="comparison-legend-item">Стоимость</p>
           <p className="comparison-legend-item">Стоимость со скидкой</p>

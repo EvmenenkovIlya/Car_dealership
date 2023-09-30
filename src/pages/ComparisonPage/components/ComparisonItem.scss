@@ -10,6 +10,7 @@
         flex-direction: column;
         border-bottom: 1px solid $background-secondary-color;
         height: 250px;
+        padding: 0 25px;
 
         h2 {
             font-size: 20px;
@@ -19,6 +20,11 @@
         .car-img {
             width: 270px;
             height: 150px;
+        }
+
+        .info-header {
+            display: flex;
+            justify-content: space-between;
         }
     }
 

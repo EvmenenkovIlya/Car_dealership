@@ -2,11 +2,9 @@ import './IndividualCarContainer.scss';
 import { Car } from '../../models/car';
 import { ReactComponent as Comparison } from '../../components/assets/comparison.svg';
 import { ReactComponent as Heart } from '../../components/assets/heart.svg';
-import { RootState } from '../../store/store';
-import { checkInComparison, toggleToComparison } from '../../pages/ComparisonPage/comparisonPageSlice';
-import { checkInFavorites, toggleToFavorites } from '../../pages/FavoritesPage/favoritesPageSlice';
+import { selectComparisonItems, toggleToComparison } from '../../pages/ComparisonPage/comparisonPageSlice';
+import { selectFavoritesItems, toggleToFavorites } from '../../pages/FavoritesPage/favoritesPageSlice';
 import { useDispatch, useSelector } from 'react-redux';
-import React from 'react';
 import blackButton from './assets/black-button.svg';
 import fonCity from './assets/fon-city.png';
 import gasStation from './assets/gas-station.png';
@@ -24,8 +22,8 @@ interface IndividualCarItem {
 export const IndividualCarContainer = (car: IndividualCarItem) => {
   const dispatch = useDispatch();
   const myArray: string[] = car.item.gifts;
-  const inFavorites = useSelector((state: RootState) => checkInFavorites(state, car.item.id));
-  const inComparison = useSelector((state: RootState) => checkInComparison(state, car.item.id));
+  const inFavorites = useSelector(selectFavoritesItems).find((item) => item.id === car.item.id);
+  const inComparison = useSelector(selectComparisonItems).find((item) => item.id === car.item.id);
   return (
     <div className="individual-car-container">
       <div className="top-block">
@@ -56,7 +54,7 @@ export const IndividualCarContainer = (car: IndividualCarItem) => {
         {myArray.map((element: string, index: number) => (
           <>
             <img src={present} alt="present" />
-            <div key={`element-${index}`} className="style">
+            <div className="style" key={`element-${index}`}>
               {element}
               <p className="style gift">в подарок</p>
             </div>
