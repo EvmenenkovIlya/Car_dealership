@@ -8,6 +8,7 @@ interface RadioButtonProps {
   label: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   checked: boolean;
+  count: number;
 }
 
 export const RadioButton = (props: RadioButtonProps) => {
@@ -15,7 +16,9 @@ export const RadioButton = (props: RadioButtonProps) => {
     <div className="radiobutton">
       <label className="radiobutton-label">
         <input type="radio" name={props.name} value={props.value} onChange={props.onChange} className="radiobutton-input" checked={props.checked} />
-        <span className="custom-radiobutton">{props.label}</span>
+        <span className="custom-radiobutton">
+          {props.label} <span className="accent">{props.count ? props.count : ''}</span>
+        </span>
       </label>
     </div>
   );

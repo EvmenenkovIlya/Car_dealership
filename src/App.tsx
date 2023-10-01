@@ -24,7 +24,6 @@ function App() {
       <Routes>
         <Route index element={<HomePage />} />
         <Route path="detail" element={<DetailInfoPage />}></Route>
-        <Route path="login" element={<LoginPage />} />
         <Route path="about-company" element={<AboutCompanyPage />} />
         <Route path="selections" element={<SelectionsPage />} />
         <Route path="blog" element={<Blog />} />

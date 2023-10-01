@@ -46,4 +46,16 @@
         background-color: $background-color;
         margin-bottom: 70px;
     }
+
+    .cars-container {
+        display: flex;
+        height: auto;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .no-cars-notification {
+        font-size: 20px;
+    }
 }

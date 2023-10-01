@@ -1,15 +1,13 @@
+import { Car } from '../../models/car';
+import { Option, options } from './options';
 import { RadioButton } from './RadioButton';
 import React, { useState } from 'react';
 
 interface RadioButtonContainerProps {
   onSelectedChange: (value: string) => void;
+  cars?: Car[];
+  options: Option[];
 }
-
-const options = [
-  { value: 'NEW_CARS', label: 'Новые авто 3', id: 1 },
-  { value: 'OLD_CARS', label: 'С пробегом 3', id: 2 },
-  { value: 'TAXIS', label: 'Такси 3', id: 3 },
-];
 
 export const RadioButtonContainer = (props: RadioButtonContainerProps) => {
   const [selectedType, setSelectedType] = useState<string>('NEW_CARS');
@@ -20,7 +18,7 @@ export const RadioButtonContainer = (props: RadioButtonContainerProps) => {
   };
   return (
     <div className="radiobutton-container">
-      {options.map((item) => (
+      {props.options.map((item) => (
         <RadioButton
           name="car-type"
           value={item.value}
@@ -29,6 +27,7 @@ export const RadioButtonContainer = (props: RadioButtonContainerProps) => {
           checked={selectedType === item.value}
           label={item.label}
           key={'key-' + item.id}
+          count={props.cars ? props.cars.filter((car) => car.condition === item.value).length : 0}
         />
       ))}
     </div>
