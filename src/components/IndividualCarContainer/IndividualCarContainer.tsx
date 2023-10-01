@@ -90,9 +90,9 @@ export const IndividualCarContainer = (car: IndividualCarItem) => {
         <img className="black-b" src={blackButton} alt="blackButton" />
         <img className="grey-b" src={greyButton} alt="greyButton" />
         <div className="button-text">
-          <button className='long'>Резерв онлайн</button>
-          <button className='short'>Купить</button>
-          <button className='short'>Подробнее</button>
+          <button className="long">Резерв онлайн</button>
+          <button className="short">Купить</button>
+          <button className="short">Подробнее</button>
         </div>
       </div>
     </div>
