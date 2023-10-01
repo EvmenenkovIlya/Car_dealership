@@ -15,6 +15,7 @@ import horsePower from './assets/horse-power.png';
 import overclocking from './assets/overclocking.png';
 import present from './assets/present.svg';
 import redButton from './assets/red-button.svg';
+import redButtonMob from './assets/RedButtonMob.png';
 import redSpace from './assets/red-space.svg';
 import speed from './assets/speed.png';
 import useWindowDimensions from '../../hooks/useWindowDimensions';
@@ -84,13 +85,14 @@ export const IndividualCarContainer = (car: IndividualCarItem) => {
         <p>{car.item.overclocking} c.</p>
       </div>
       <div className="buttons">
-        <img className="red-b" src={redButton} alt="redButton" />
+        <img className="red-b mobile-only" src={redButtonMob} alt="redButtonMob" />
+        <img className="red-b desktop-only" src={redButton} alt="redButton" />
         <img className="black-b" src={blackButton} alt="blackButton" />
         <img className="grey-b" src={greyButton} alt="greyButton" />
         <div className="button-text">
-          <button>Резерв онлайн</button>
-          <button>Купить</button>
-          <button>Подробнее</button>
+          <button className='long'>Резерв онлайн</button>
+          <button className='short'>Купить</button>
+          <button className='short'>Подробнее</button>
         </div>
       </div>
     </div>

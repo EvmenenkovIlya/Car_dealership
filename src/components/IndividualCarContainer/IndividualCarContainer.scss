@@ -75,6 +75,7 @@
             line-height: normal;
             margin-bottom: 11px;
             color: $main-color;
+            font-weight: 500;
         }
     }
 
@@ -85,10 +86,6 @@
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        font-size: 11px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
         margin-bottom: 4px;
     }
 
@@ -238,7 +235,7 @@
     .individual-car-container {
         width: 290px;
         height: 416px;
-        padding: 20px;
+        padding: 10px;
         border-radius: 25px;
         margin-bottom: 30px;
         box-shadow: 0px 0px 30px 0px rgba(133, 147, 159, 0.30);
@@ -255,6 +252,202 @@
                 width: 153px;
                 height: 85px;
 
+            }
+        }
+
+        #benefit {
+            display: flex;
+            align-items: center;
+            margin-bottom: 11px;
+            justify-content: baseline;
+
+            p {
+                font-family: $main-font;
+                color: $accent-color;
+                font-size: 11px;
+                font-weight: 500;
+                font-weight: bold;
+                width: 244px;
+                line-height: normal;
+                font-style: normal;
+                width: 155px;
+                font-size: 12px;
+            }
+
+            img {
+                position: absolute;
+                z-index: -1;
+                width: 122px;
+                height: 21px;
+            }
+
+            #day-sale {
+                color: white;
+                font-size: 11px;
+                width: 200px;
+            }
+
+            div {
+                width: 110px;
+                margin-left: 12px;
+
+                p {
+                    font-size: 11px;
+                }
+            }
+        }
+
+        .price {
+            display: inline-grid;
+            grid-template-areas: "a a b b" "c d e f";
+            align-items: center;
+            justify-content: space-between;
+            width: 270px;
+
+            img {
+                display: block;
+                width: 61px;
+                height: 24px;
+            }
+
+            p {
+                font-style: normal;
+                line-height: normal;
+                margin-bottom: 11px;
+                color: $main-color;
+                font-weight: 500;
+            }
+
+
+        }
+
+        .information-discount {
+            display: grid;
+            grid-template-columns: 41px auto;
+            height: 115px;
+
+            .picture {
+                display: grid;
+                position: relative;
+                flex-flow: column wrap;
+                align-content: space-around;
+                height: 160px;
+
+                img {
+                    display: block;
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            .gift {
+                color: $main-color;
+            }
+
+            .style {
+                font-size: 9px;
+            }
+        }
+
+        .pos {
+            width: 270px;
+            position: relative;
+            top: -17px;
+            margin-left: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-bottom: 4px;
+
+            p {
+                font-size: 8px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+        }
+
+        .grid-a {
+            grid-area: a;
+            font-size: 20px;
+        }
+
+        .grid-b {
+            grid-area: b;
+            font-size: 10px;
+            font-weight: 400;
+        }
+
+        .grid-c {
+            grid-area: c;
+            width: auto;
+            height: 10px;
+        }
+
+        .grid-d {
+            grid-area: d;
+            width: auto;
+            height: 10px;
+        }
+
+        .grid-e {
+            grid-area: e;
+            width: auto;
+            height: 10px;
+        }
+
+        .grid-f {
+            grid-area: f;
+            width: auto;
+            height: 10px;
+        }
+
+        .buttons {
+            .red-b {
+                position: relative;
+                display: block;
+                margin: 0 auto;
+                width: 250px;
+                height: 50px;
+            }
+
+            .black-b {
+                top: 58px;
+                left:0px;
+                height: 50px;
+                position: absolute;
+                z-index: -2;
+            }
+
+            .grey-b {
+                top: 58px;
+                position: absolute;
+                height: 50px;
+                right: 0;
+                z-index: -3;
+            }
+
+            .button-text {
+                display: flex;
+                position: absolute;
+                z-index: 5;
+                flex-wrap: wrap;
+                top:0;
+                
+
+                button {
+                    height: 50px;
+                    margin: 0 5px  8px 5px;
+                }
+                .long
+                {
+                    width: 250px;
+                }
+                .short
+                {
+                    padding-left: 35px;
+                    width: 120px;
+                }
             }
         }
     }

@@ -1,6 +1,7 @@
 @import '../../variables';
 
 .car-with-pts-block {
+    margin-top: 64px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -56,6 +57,9 @@
 
     .car-with-pts-block {
 
+            .header-pts {
+                    margin-top: 40px;
+                }
         .main-car-container {
             padding: 0 10px;
             justify-content: center;
