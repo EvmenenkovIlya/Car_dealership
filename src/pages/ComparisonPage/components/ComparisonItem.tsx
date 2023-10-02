@@ -18,21 +18,23 @@ export const ComparisonItem = (props: ComparisonItemProps) => {
   return (
     <div className="comparison-item">
       <div className="main-info">
-        <h2>{props.car.type}</h2>
-        <img src="" alt="" className="car-img" />
-        <div className="top-pic">
-          <button onClick={() => dispatch(toggleToFavorites(props.car))}>
-            <Heart className={inFavorites ? 'in-favorites' : ''} />
-          </button>
-          <button onClick={() => dispatch(toggleToComparison(props.car))}>
-            <Cross />
-          </button>
+        <div className="info-header">
+          <h2>{props.car.type}</h2>
+          <div className="top-pic">
+            <button onClick={() => dispatch(toggleToFavorites(props.car))}>
+              <Heart className={inFavorites ? 'in-favorites' : ''} />
+            </button>
+            <button onClick={() => dispatch(toggleToComparison(props.car))}>
+              <Cross />
+            </button>
+          </div>
         </div>
+        <img src={props.car.photo} alt="" className="car-img" />
       </div>
-      <p className="car-info">123</p>
-      <p className="car-info">123</p>
-      <p className="car-info">123</p>
-      <p className="car-info">123</p>
+      <p className="car-info">{props.car.price}</p>
+      <p className="car-info">{props.car.credit}</p>
+      <p className="car-info">{props.car.condition}</p>
+      <p className="car-info">{props.car.gasStation}</p>
       <p className="car-info">123</p>
       <p className="car-info">123</p>
       <p className="car-info">123</p>
@@ -40,7 +42,7 @@ export const ComparisonItem = (props: ComparisonItemProps) => {
       <p className="car-info">13</p>
       <p className="car-info">123</p>
       <p className="car-info">123</p>
-      <p className="car-info">{props.car.condition}</p>
+      <p className="car-info">1</p>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import './HomePage.scss';
-import { AboutCompany } from '../AboutCompanyPage/AboutCompanyPage';
+import { AboutCompany } from '../AboutCompanyPage/components/AboutCompany';
 import { AboutTabControl } from './components/AboutTabControl/AboutTabControl';
 import { Blog } from '../BlogPage/BlogPage';
 import { CarAvailable } from '../../components/CarAvailable/CarAvailable';

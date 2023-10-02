@@ -1,5 +1,5 @@
 import './App.scss';
-import { AboutCompany } from './pages/AboutCompanyPage/AboutCompanyPage';
+import { AboutCompanyPage } from './pages/AboutCompanyPage/AboutCompanyPage';
 import { ArticlePage } from './pages/ArticlePage/ArticlePage';
 import { Blog } from './pages/BlogPage/BlogPage';
 import { CarAvailable } from './components/CarAvailable/CarAvailable';
@@ -11,7 +11,6 @@ import { Footer } from './components/Footer/Footer';
 import { Header } from './components/Header/Header';
 import { HomePage } from './pages/HomePage/HomePage';
 import { Location } from './pages/LocationPage/LocationPage';
-import { LoginPage } from './pages/LoginPage/LoginPage';
 import { NotFoundPage } from './pages/NotFoundPage/NotFoundPage';
 import { QuickSelectionPage } from './pages/QuickSelectionPage/QuickSelectionPage';
 import { ReviewsPage } from './pages/ReviewsPage/ReviewsPage';
@@ -25,8 +24,7 @@ function App() {
       <Routes>
         <Route index element={<HomePage />} />
         <Route path="detail" element={<DetailInfoPage />}></Route>
-        <Route path="login" element={<LoginPage />} />
-        <Route path="about" element={<AboutCompany />} />
+        <Route path="about-company" element={<AboutCompanyPage />} />
         <Route path="selections" element={<SelectionsPage />} />
         <Route path="blog" element={<Blog />} />
         <Route path="blog/:id" element={<ArticlePage />} />
