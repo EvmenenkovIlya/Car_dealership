@@ -23,7 +23,7 @@ function App() {
       <Header />
       <Routes>
         <Route index element={<HomePage />} />
-        <Route path="detail" element={<DetailInfoPage />}></Route>
+        <Route path="detail/:id" element={<DetailInfoPage />}></Route>
         <Route path="about-company" element={<AboutCompanyPage />} />
         <Route path="selections" element={<SelectionsPage />} />
         <Route path="blog" element={<Blog />} />
