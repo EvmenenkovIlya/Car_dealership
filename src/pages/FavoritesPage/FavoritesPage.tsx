@@ -7,6 +7,7 @@ import { options } from '../../components/RadioButton/options';
 import { selectFavoritesItems, selectFavoritesItemsCount } from './favoritesPageSlice';
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
+import useWindowDimensions from '../../hooks/useWindowDimensions';
 
 export const FavoritesPage = () => {
   const [selectedType, setSelectedType] = useState<string>('NEW_CARS');
@@ -15,7 +16,8 @@ export const FavoritesPage = () => {
   const carsList = useSelector(selectFavoritesItems);
   const count = useSelector(selectFavoritesItemsCount);
   const selectedCars = carsList.filter((car) => car.condition === selectedType);
-
+  const { height, width } = useWindowDimensions();
+  let isComputer = width > 850;
   const toggleModal = () => {
     setShowModal(!showModal);
   };
@@ -23,18 +25,19 @@ export const FavoritesPage = () => {
   return (
     <>
       {showModal && !isAuth && <LoginPage onClose={toggleModal} />}
-      <section id="favorites" className={!isAuth ? 'modal' : ''}>
-        <div className="route">Главная {'>'} Избранное</div>
+      <section id="favorites" className={!isAuth ? 'blur-section' : ''}>
+        {isComputer ? <div className="route">Главная {'>'} Избранное</div> : <></>}
         <div className="header-part">
           <div className="controls">
             <h1>Избранное</h1>
-            <RadioButtonContainer onSelectedChange={setSelectedType} cars={carsList} options={options} />
+            {isComputer ? <RadioButtonContainer onSelectedChange={setSelectedType} cars={carsList} options={options} /> : <></>}
           </div>
           <p>
             В избранном <strong>{count} авто</strong>
           </p>
         </div>
         <div className="horizontal-line"></div>
+        {!isComputer ? <RadioButtonContainer onSelectedChange={setSelectedType} cars={carsList} options={options} /> : <></>}
         <h2>{selectedType === 'NEW_CARS' ? 'Новые авто' : selectedType === 'OLD_CARS' ? 'С пробегом' : 'Такси'}</h2>
         <div className="cars-container">
           {selectedCars.length === 0 ? (

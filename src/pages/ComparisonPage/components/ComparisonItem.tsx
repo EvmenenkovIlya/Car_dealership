@@ -7,12 +7,15 @@ import { checkInFavorites, toggleToFavorites } from '../../FavoritesPage/favorit
 import { toggleToComparison } from '../comparisonPageSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import React from 'react';
+import useWindowDimensions from '../../../hooks/useWindowDimensions';
 
 interface ComparisonItemProps {
   car: Car;
 }
 
 export const ComparisonItem = (props: ComparisonItemProps) => {
+  const { height, width } = useWindowDimensions();
+  let isComputer = width > 850;
   const dispatch = useDispatch();
   const inFavorites = useSelector((state: RootState) => checkInFavorites(state, props.car.id));
   return (
@@ -31,18 +34,40 @@ export const ComparisonItem = (props: ComparisonItemProps) => {
         </div>
         <img src={props.car.photo} alt="" className="car-img" />
       </div>
-      <p className="car-info">{props.car.price}</p>
-      <p className="car-info">{props.car.credit}</p>
-      <p className="car-info">{props.car.condition}</p>
-      <p className="car-info">{props.car.gasStation}</p>
-      <p className="car-info">123</p>
-      <p className="car-info">123</p>
-      <p className="car-info">123</p>
-      <p className="car-info">123</p>
-      <p className="car-info">13</p>
-      <p className="car-info">123</p>
-      <p className="car-info">123</p>
-      <p className="car-info">1</p>
+
+      <p className="car-info">
+        <span className="label">Стоимость</span>
+        {props.car.price}
+      </p>
+      <p className="car-info">
+        <span className="label">Стоимость со скидкой</span>
+        {props.car.credit}
+      </p>
+      <p className="car-info">
+        <span className="label">Состояние</span>
+        {props.car.condition === 'NEW_CARS' ? 'Новые авто' : props.car.condition === 'OLD_CARS' ? 'С пробегом' : 'Такси'}
+      </p>
+      <p className="car-info">
+        <span className="label">Регион</span>
+        {props.car.speed}
+      </p>
+      <p className="car-info">
+        <span className="label">Марка</span>
+        {props.car.type}
+      </p>
+      <p className="car-info">
+        <span className="label">Модель</span>
+        {props.car.model}
+      </p>
+      <p className="car-info">
+        <span className="label">Модификация</span>
+        {props.car.model}
+      </p>
+      {isComputer ? <p className="car-info">1</p> : <></>}
+      {isComputer ? <p className="car-info">1</p> : <></>}
+      {isComputer ? <p className="car-info">1</p> : <></>}
+      {isComputer ? <p className="car-info">1</p> : <></>}
+      {isComputer ? <p className="car-info">1</p> : <></>}
     </div>
   );
 };

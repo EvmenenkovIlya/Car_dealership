@@ -6,6 +6,7 @@ import { HeaderInfoLink } from './components/HeaderInfoLink/HeaderInfoLink';
 import { LoginPage } from '../../pages/LoginPage/LoginPage';
 import { NavigationLink } from '../NavigationLink/NavigationLink';
 import { catalogLinks } from './catalogLinks';
+import { isAuthenticated } from '../../pages/LoginPage/currentUserSlice';
 import { selectComparisonItemsCount } from '../../pages/ComparisonPage/comparisonPageSlice';
 import { selectFavoritesItemsCount } from '../../pages/FavoritesPage/favoritesPageSlice';
 import { useSelector } from 'react-redux';
@@ -27,6 +28,7 @@ export const Header = () => {
   let isComputer = width > 850;
   const favoritesCount = useSelector(selectFavoritesItemsCount);
   const comparisonCount = useSelector(selectComparisonItemsCount);
+  const isAuth = useSelector(isAuthenticated);
   const [showModal, setShowModal] = useState(false);
 
   const toggleModal = () => {
@@ -101,7 +103,7 @@ export const Header = () => {
             <></>
           )}
           <button className="btn login-button" onClick={toggleModal}>
-            Войти
+            {isAuth ? 'Выйти' : 'Войти'}
           </button>
           <div id="header-icons">
             <HeaderIcon url="/favorites" src={heart} count={favoritesCount} />
