@@ -83,8 +83,7 @@ export const IndividualCarContainer = (car: IndividualCarItem) => {
         <p>{car.item.overclocking} c.</p>
       </div>
       <div className="buttons">
-        <img className="red-b mobile-only" src={redButtonMob} alt="redButtonMob" />
-        <img className="red-b desktop-only" src={redButton} alt="redButton" />
+        <img className="red-b" src={isComputer ? redButton : redButtonMob} alt="redButton" />
         <img className="black-b" src={blackButton} alt="blackButton" />
         <img className="grey-b" src={greyButton} alt="greyButton" />
         <div className="button-text">
