@@ -27,8 +27,6 @@ export default function Carousel() {
       <div className="navigation">
         <div ref={sliderRef} className="keen-slider">
           <div className="basic-carousel keen-slider__slide number-slide1">
-            <img className="desktop-only" id="back" src={background} alt="background" />
-            <img className="mobile-only" id="back" src={backgroundMob} alt="background" />
             <picture id="back">
               <source srcSet={background} media="(min-width:851px)" />
               <img src={backgroundMob} alt="backgroundMob" />
