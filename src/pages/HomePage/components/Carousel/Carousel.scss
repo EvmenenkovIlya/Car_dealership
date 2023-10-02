@@ -118,7 +118,7 @@
 
     .navigation {
         position: relative;
-        margin: 0 25px 38px 25px;
+        margin: 0 26px 38px 25px;
     }
 
     .dots {
@@ -176,19 +176,13 @@
     .carusel-arrow--disabled {
         fill: rgba(255, 255, 255, 0.5);
     }
-}
 
-@media (min-width:851px) {
-    .mobile-only {
-        display: none !important;
+    .hidden-arrow {
+        display: none;
     }
 }
 
 @media (max-width:850px) {
-    .desktop-only {
-        display: none !important;
-    }
-
     .carousel-section {
         .navigation {
             position: relative;
@@ -214,7 +208,7 @@
 
             .full-ad {
                 margin-top: 0;
-                left:20px;
+                left: 20px;
                 width: 100%;
 
                 #left-only {
@@ -250,7 +244,7 @@
                     right: auto;
                     margin-top: 167px;
                     width: 90%;
-                    bottom:42%;
+                    bottom: 42%;
                 }
             }
         }
