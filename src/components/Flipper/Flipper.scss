@@ -1,9 +1,5 @@
 @import '../../variables';
 
-.keen-slider:not([data-keen-slider-disabled]) {
-  padding-top: 40px;
-  overflow: unset;
-}
 
 .sliders-block {
   display: flex;
@@ -12,6 +8,10 @@
 
 .navigation-wrapper {
   position: relative;
+  .keen-slider:not([data-keen-slider-disabled]) {
+    padding-top: 40px;
+    overflow: unset;
+  }
 }
 
 .dots {

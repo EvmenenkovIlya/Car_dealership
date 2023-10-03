@@ -9,7 +9,6 @@ import { login, register } from './api';
 import { logout } from './currentUserSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import React from 'react';
-
 const baseUrl = process.env.REACT_APP_BASE_URL;
 interface ModalLoginProps {
   onClose: () => void;

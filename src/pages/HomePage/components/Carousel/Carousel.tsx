@@ -1,10 +1,13 @@
 import './Carousel.scss';
 import 'keen-slider/keen-slider.min.css';
+import { string } from 'yargs';
 import { useKeenSlider } from 'keen-slider/react';
 import KeenSlider from 'keen-slider';
 import React, { useState } from 'react';
 import background from './assets/background.png';
+import backgroundMob from './assets/backgroundMob.png';
 import carPhoto from './assets/car-ad.png';
+import useWindowDimensions from '../../../../hooks/useWindowDimensions';
 
 export default function Carousel() {
   const [currentSlide, setCurrentSlide] = React.useState(0);
@@ -21,10 +24,13 @@ export default function Carousel() {
 
   return (
     <div className="carousel-section">
-      <div className="navigation-wrapper">
+      <div className="navigation">
         <div ref={sliderRef} className="keen-slider">
           <div className="basic-carousel keen-slider__slide number-slide1">
-            <img id="back" src={background} alt="background" />
+            <picture id="back">
+              <source srcSet={background} media="(min-width:851px)" />
+              <img src={backgroundMob} alt="backgroundMob" />
+            </picture>
             <div className="full-ad">
               <p id="left-only">Осталось всего 10 авто!</p>
               <p id="advertisement">Грандиозная распродажа тестового парка!</p>
@@ -71,11 +77,13 @@ export default function Carousel() {
 }
 
 function Arrow(props: { disabled: boolean; left?: boolean; onClick: React.MouseEventHandler<SVGSVGElement> }) {
-  const disabeld = props.disabled ? ' arrow--disabled' : '';
+  const disabeld = props.disabled ? ' carusel-arrow--disabled' : '';
+  const { height, width } = useWindowDimensions();
+  let isComputer = width > 850;
   return (
     <svg
       onClick={props.onClick}
-      className={`arrow ${props.left ? 'arrow--left' : 'arrow--right'} ${disabeld}`}
+      className={` carusel-arrow ${props.left ? 'carusel-arrow--left' : 'carusel-arrow--right'} ${disabeld} ${isComputer ? '' : 'hidden-arrow'}`}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
     >

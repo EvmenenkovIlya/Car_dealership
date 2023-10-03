@@ -1,6 +1,7 @@
 @import '../../variables';
 
 .car-with-pts-block {
+    margin-top: 64px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -15,11 +16,13 @@
 
     .main-car-container {
         display: flex;
-        width: 1398px;
+        padding: 0 13%;
         height: auto;
-        justify-content: space-between;
         flex-wrap: wrap;
         margin: 0 auto;
+        gap: 30px;
+        justify-content:center;
+
     }
 
     .show {
@@ -37,5 +40,20 @@
         flex-shrink: 0;
         margin: 0 auto;
         margin-bottom: 67px;
+        margin-top: 30px;
+    }
+
+}
+
+@media (max-width:850px) {
+    .car-with-pts-block {
+
+            .header-pts {
+                    margin-top: 40px;
+                }
+        .main-car-container {
+            padding: 0 10px;
+            justify-content: center;
+        }
     }
 }

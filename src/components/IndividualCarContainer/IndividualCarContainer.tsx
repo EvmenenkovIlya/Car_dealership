@@ -13,13 +13,18 @@ import horsePower from './assets/horse-power.png';
 import overclocking from './assets/overclocking.png';
 import present from './assets/present.svg';
 import redButton from './assets/red-button.svg';
+import redButtonMob from './assets/RedButtonMob.png';
 import redSpace from './assets/red-space.svg';
 import speed from './assets/speed.png';
+import useWindowDimensions from '../../hooks/useWindowDimensions';
 
 interface IndividualCarItem {
   item: Car;
 }
 export const IndividualCarContainer = (car: IndividualCarItem) => {
+  const { height, width } = useWindowDimensions();
+  let isComputer = width > 850;
+
   const dispatch = useDispatch();
   const myArray: string[] = car.item.gifts;
   const inFavorites = useSelector(selectFavoritesItems).find((item) => item.id === car.item.id);
@@ -78,13 +83,13 @@ export const IndividualCarContainer = (car: IndividualCarItem) => {
         <p>{car.item.overclocking} c.</p>
       </div>
       <div className="buttons">
-        <img className="red-b" src={redButton} alt="redButton" />
+        <img className="red-b" src={isComputer ? redButton : redButtonMob} alt="redButton" />
         <img className="black-b" src={blackButton} alt="blackButton" />
         <img className="grey-b" src={greyButton} alt="greyButton" />
         <div className="button-text">
-          <button>Резерв онлайн</button>
-          <button>Купить</button>
-          <button>Подробнее</button>
+          <button className="long">Резерв онлайн</button>
+          <button className="short">Купить</button>
+          <button className="short">Подробнее</button>
         </div>
       </div>
     </div>
