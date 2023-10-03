@@ -16,11 +16,13 @@
 
     .main-car-container {
         display: flex;
-        padding: 0 260px;
+        padding: 0 13%;
         height: auto;
-        justify-content: space-between;
         flex-wrap: wrap;
         margin: 0 auto;
+        gap: 30px;
+        justify-content:center;
+
     }
 
     .show {
@@ -38,20 +40,12 @@
         flex-shrink: 0;
         margin: 0 auto;
         margin-bottom: 67px;
+        margin-top: 30px;
     }
 
-}
-
-@media (min-width:851px) {
-    .mobile-only {
-        display: none !important;
-    }
 }
 
 @media (max-width:850px) {
-    .desktop-only {
-        display: none !important;
-    }
     .car-with-pts-block {
 
             .header-pts {
