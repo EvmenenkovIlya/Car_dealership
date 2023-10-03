@@ -52,10 +52,15 @@ export const LoginPage: React.FC<ModalLoginProps> = ({ onClose }) => {
           &times;
         </button>
         {isAuthenticated ? (
-          <>
-            <p>You are logged in!</p>
-            <button onClick={onSubmitLogOut}>Log out</button>
-          </>
+          <div className="auth-user">
+            <p>Вы успешно зарегистрировались!</p>
+            <button className="btn" onClick={onClose}>
+              Продолжить работу с сайтом
+            </button>
+            <button className="btn" onClick={onSubmitLogOut}>
+              Выйти
+            </button>
+          </div>
         ) : (
           <Tabs>
             <TabList>

@@ -10,13 +10,14 @@
         h1 {
             padding-right: 40px;
         }
+    }
 
-        .radiobutton-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 12px;
-        }
+    .radiobutton-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 20px;
     }
 
     .horizontal-line {
@@ -53,7 +54,20 @@
         }
 
         .comparison-items-container {
-            display: flex;
+
+            .keen-slider:not([data-keen-slider-disabled]) {
+                padding-top: 0;
+
+                .keen-slider__slide {
+                    width: auto;
+                }
+            }
+
+            .dots {
+                left: 50%;
+                right: 50%;
+                position: absolute;
+            }
         }
 
         p {
@@ -62,6 +76,24 @@
             line-height: normal;
             padding: 24px 0;
         }
+    }
+}
 
+@media (max-width: 850px) {
+    #comparison {
+        margin: 0 15px;
+        gap: 20px;
+
+        .controls {
+            margin-bottom: 0;
+        }
+
+        .horizontal-line {
+            margin-bottom: 0;
+        }
+
+        .comparison-table {
+            padding-bottom: 0;
+        }
     }
 }

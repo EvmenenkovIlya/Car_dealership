@@ -1,5 +1,5 @@
 import { Car } from '../../models/car';
-import { Option, options } from './options';
+import { Option } from './options';
 import { RadioButton } from './RadioButton';
 import React, { useState } from 'react';
 

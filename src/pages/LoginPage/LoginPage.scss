@@ -77,6 +77,13 @@
             }
         }
 
+        .auth-user {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            align-items: center;
+        }
+
         form {
             display: flex;
             flex-direction: column;
@@ -106,6 +113,19 @@
         #modal-content {
             padding: 20px 40px;
             width: 100%;
+
+            form {
+                align-items: center;
+
+                label {
+                    display: inline-block;
+                    width: 160px;
+                }
+
+                input {
+                    width: 180px;
+                }
+            }
         }
     }
 }
